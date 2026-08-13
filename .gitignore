@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .DS_Store
 data/active_users.db
+data/firehose_users.db
+
