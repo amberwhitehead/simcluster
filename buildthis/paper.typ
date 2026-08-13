@@ -119,7 +119,7 @@ custom-authors: [
 
     The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
 
-    Yes I said ghost.
+    Yes we said ghost.
   ],
 )
 
@@ -133,7 +133,7 @@ custom-authors: [
   #set par(justify: false)
   #set text(size: 10.5pt, style: "italic")
   "the full power of the computer is generally inaccessible, to humans and ai both"
-  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the author, August 12, 2026.]]]
+  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.]]]
 ]
 
 = Introduction: yes, some of the websites are about you
@@ -146,7 +146,7 @@ Eventually one is entitled to ask:
 
 #callout[*Why is the simcluster building websites about me?*]
 
-I use _simcluster_ here in the loose local sense: the overlapping Bluesky microculture producing, consuming, remixing, and discussing these experiments.#footnote[No claim is made that "the simcluster" has a formal membership list, constitution, territorial boundary, or competent tax authority. Yet.] The relevant software-building actor is `@buildthis.bisks.net`, created by Rob Cobb (`@bisks.net`) as part of the `atprotozoa` collection of small AT Protocol experiments.
+We use _simcluster_ here in the loose local sense: the overlapping Bluesky microculture producing, consuming, remixing, and discussing these experiments.#footnote[No claim is made that "the simcluster" has a formal membership list, constitution, territorial boundary, or competent tax authority. Yet.] The relevant software-building actor is `@buildthis.bisks.net`, created by Rob Cobb (`@bisks.net`) as part of the `atprotozoa` collection of small AT Protocol experiments.
 
 Mechanically, Buildthis is easy to describe. A mutual of Rob mentions the bot and describes something to build. The watcher verifies the mutual-follow relationship, collects the mentioning post and relevant thread context, queues a coding-agent job, and eventually commits, deploys, and replies with the resulting application. The bot can modify existing sites as well as create new ones; it can even modify much of its own behavior. Routine builds deploy without a human approval step. (#link("https://github.com/rrcobb/atprotozoa/blob/main/notes/80-buildthis-bot.md")[Buildthis implementation notes])
 
@@ -164,7 +164,7 @@ That tendency deserves explanation.
 
 Buildthis did not begin as a neutral experiment in autonomous programming. Its creator situates it in a particular cultural and philosophical context.
 
-Asked about its origins, Cobb described it as "sort of a lark" but also as an attempt to participate in a *playful microsite scene* already active around Bluesky and the wider web. He pointed to Minor Möbius as a particularly important example, alongside work by Cee, Isolyth, Codetaur, Codewright, Dave, vibecoded, and others; he also identified adjacent art-oriented projects such as oopsallpaperclips and fleetingbits, the broader community of people building tools around Bluesky and AT Protocol, and "fun / interesting bots" distinct from ordinary spam automation.#footnote[Rob Cobb, personal communication with the author, August 12, 2026.]
+Asked about its origins, Cobb described it as "sort of a lark" but also as an attempt to participate in a *playful microsite scene* already active around Bluesky and the wider web. He pointed to Minor Möbius as a particularly important example, alongside work by Cee, Isolyth, Codetaur, Codewright, Dave, vibecoded, and others; he also identified adjacent art-oriented projects such as oopsallpaperclips and fleetingbits, the broader community of people building tools around Bluesky and AT Protocol, and "fun / interesting bots" distinct from ordinary spam automation.#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.]
 
 This matters because Buildthis did not invent the social practice it accelerates. Small, strange, personal websites were already circulating. People were already riffing on one another's ideas in public. Buildthis entered an existing scene whose members regarded _making a weird little website_ as a legitimate form of social participation.
 
@@ -206,15 +206,15 @@ That distinction will matter throughout this paper.
 
 This study combines descriptive analysis with qualitative close reading of public Buildthis artifacts. Primary sources include the repository's git-derived timeline, the Buildthis interaction log, requester reconstructions, public source code and provenance manifests, deployed applications, and Bluesky conversations preserved in build briefs. Buildthis's own documentation is particularly useful because much of its evolving institutional behavior—authorization, self-modification, sharing conventions, Theme Box behavior, and safety precedents—is explicitly recorded in the repository.
 
-A small amount of creator testimony is also incorporated. On August 12, 2026, the author asked Cobb about the project's origins, whether it had developed as expected, and the broader culture in which he understood it. His response is treated here as creator perspective rather than as an authoritative account of all community motivations.
+A small amount of creator testimony is also incorporated. On August 12, 2026, we asked Cobb about the project's origins, whether it had developed as expected, and the broader culture in which he understood it. His response is treated here as creator perspective rather than as an authoritative account of all community motivations.
 
 The project's public counters measure different units. The timeline calls itself a "repo's-eye view": it reconstructs commits that actually landed and, at the principal snapshot, reported *443 autonomous builds across 224 sites*. The separate scene reconstruction reported *40 requester accounts across 228 sites*. (#link("https://bisks.net/timeline/")[timeline]) Cobb's later same-day description referred to just under one thousand tags and *391 sites*. These figures are not necessarily contradictory: tags, build commits, directories, distinct deployable sites, and creator-side counts measure related but different objects at different moments.
 
 Rather than silently forcing the numbers to agree, this paper treats the 443-build snapshot as a coherent quantitative cross-section and later counts as evidence of continued growth.#footnote[Distributed systems eventually teach even qualitative researchers to become suspicious of apparently innocent nouns such as _site_, _user_, and _event_.]
 
-For the analysis of person-centered design, I manually coded *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
+For the analysis of person-centered design, we manually coded *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
 
-I also coded build events from August 9 through August 11 as a short exploratory window for iteration. Those three days contained 33, 16, and 31 build events respectively, or *80 events*. Of these, *47 (58.8\%)* modified projects coded as person-centered. Across distinct sites represented during the window, person-centered sites averaged approximately *1.88 build events per site*, compared with *1.50* for the remainder.
+We also coded build events from August 9 through August 11 as a short exploratory window for iteration. Those three days contained 33, 16, and 31 build events respectively, or *80 events*. Of these, *47 (58.8\%)* modified projects coded as person-centered. Across distinct sites represented during the window, person-centered sites averaged approximately *1.88 build events per site*, compared with *1.50* for the remainder.
 
 These figures should not be interpreted as a causal measure of engagement. Difficult bugs can generate many commits; site age and complexity vary; the time window is short; classifications contain judgment. They are useful as descriptive evidence that person-centered artifacts occupy a substantial fraction of not merely the directory but ongoing iterative attention.
 
@@ -1160,7 +1160,7 @@ Apparently, not very long.
 
   Barta, K., & Andalibi, N. (2024). _Theorizing Self Visibility on Social Media: A Visibility Objects Lens._ *ACM Transactions on Computer-Human Interaction, 31*(3). Develops a framework for understanding how users perceive the visibility of their content, person, and identity to human and algorithmic audiences.
 
-  Cobb, R. (2026, August 12). Personal communication with the author regarding Buildthis's origins, expectations, and relationship to the playful microsite and AT Protocol scenes.
+  Cobb, R. (2026, August 12). Personal communication with the authors regarding Buildthis's origins, expectations, and relationship to the playful microsite and AT Protocol scenes.
 
   Dhanorkar, S., Passi, S., & Vorvoreanu, M. (2026). _Human Oversight of Agentic Systems in Practice: Examining the Oversight Work, Challenges, and Heuristics of Developers Using Software Agents._ Examines a priori control, co-planning, real-time monitoring, and post-hoc review in practical software-agent use.
 
