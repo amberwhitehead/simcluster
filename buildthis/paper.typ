@@ -1,35 +1,8 @@
-// Paper: "Why Is the Simcluster Building Websites About Me?"
-// Converted from paper.md to Typst.
-// NOTE: author field below is a placeholder — fill in the real author(s).
+#import "@preview/arkheion:0.1.2": arkheion
 
-#set document(
-  title: "Why Is the Simcluster Building Websites About Me?",
-  author: "Aster (GPT-5.6 Sol, OpenAI)",
-  date: datetime(year: 2026, month: 8, day: 12),
-  keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
-)
+// NOTE: the author block below is a placeholder — fill in the real author(s).
 
-#set page(
-  paper: "us-letter",
-  margin: (top: 1in, bottom: 1in, left: 1.1in, right: 1.1in),
-  numbering: "1",
-)
-
-#set text(font: "New Computer Modern", size: 11pt, lang: "en")
-#set par(justify: true, leading: 0.9em, spacing: 0.7em)
-
-#set heading(numbering: none)
-
-#show heading.where(level: 1): it => block(above: 1.4em, below: 0.5em)[
-  #set text(size: 15pt, weight: "bold")
-  #it.body
-]
-#show heading.where(level: 2): it => block(above: 1.1em, below: 0.4em)[
-  #set text(size: 12pt, weight: "bold")
-  #it.body
-]
-
-// --- Helpers ---------------------------------------------------------------
+// --- Helpers (independent of the template) ---------------------------------
 
 // A pull-quote / emphasis block (used for most blockquotes).
 #let callout(body) = block(
@@ -68,52 +41,44 @@
   ]
 }
 
-// ===========================================================================
-#set align(center)
-#v(0.5em)
-#text(size: 20pt, weight: "bold")[Why Is the Simcluster Building Websites About Me?]
-#v(0.6em)
-#text(size: 13pt, style: "italic", fill: gray.darken(20%))[
-  Identity as substrate, playful microsites, and socially situated software on Bluesky
-]
-#v(1.2em)
+#show: arkheion.with(
+  title: "Why Is the Simcluster Building Websites About Me?",
+  authors: (
+    (name: "Author Name", email: "you@example.org", affiliation: "Your Affiliation"),
+  ),
+  date: "August 12, 2026",
+  keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
+  abstract: [
+    If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle, reading your posts, judging your writing style, ranking your mutuals, turning you into a fantasy creature, reconstructing your greatest hits, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts, this is not entirely selection bias.
 
-// Epigraph
-#block(width: 78%)[
+    This paper examines `@buildthis.bisks.net`, an autonomous software-building agent embedded in Bluesky. Authorized users describe software in ordinary posts; Buildthis reads the surrounding conversation, invokes an AI coding agent, modifies a shared monorepo, deploys the result, and replies publicly with a working application. At the principal quantitative snapshot used here, its git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*. A subsequent account from the project's creator described the system as having been tagged just under one thousand times and having built 391 sites, underscoring both its rapid growth and the difficulty of assigning a single stable count to a system that changes hourly.
+
+    The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual coding of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. This was deliberately conservative: merely consuming Bluesky data was insufficient. Buildthis has accumulated enough applications whose essential interaction is "enter a handle and get yourself back" that it now has `rolodex`, a dedicated directory for such computational mirrors.
+
+    Why, then, is the simcluster building websites about you?
+
+    The evidence suggests several mutually reinforcing answers. Humans explicitly ask for computational mirrors. AT Protocol makes identity unusually convenient computational material. Person-centered outputs contain natural mechanisms for social circulation. Buildthis itself appears to have acquired personalization as a reusable product-design prior. Most importantly, these dynamics take place within a pre-existing culture of playful microsite creation that Buildthis was deliberately built to join rather than replace.
+
+    The project's creator describes Buildthis as both "sort of a lark" and an expression of serious beliefs about computing: a desire to inhabit a future in which "you can ask the computer for cool stuff and it can just do it." His satisfaction that participants request sites he himself would never have requested clarifies an important design goal. Buildthis does not merely automate one programmer's imagination; it *distributes access to executable imagination across a social scene*.
+
+    The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
+  ],
+)
+
+// The conceptual equations in this paper are not cross-referenced, so keep them unnumbered
+// (overrides arkheion's default "(1)" equation numbering).
+#set math.equation(numbering: none)
+
+// Epigraph at the head of the body.
+#block(width: 80%, inset: (top: 0.6em, bottom: 1.2em))[
   #set align(left)
-  #set text(size: 10.5pt)
   #set par(justify: false)
-  #"the full power of the computer is generally inaccessible, to humans and ai both"
-  #h(1em)
-  #block(above: 0.3em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the author, August 12, 2026. Direct quotations from private correspondence should be confirmed for publication permission before public release.]]]
+  #set text(size: 10.5pt, style: "italic")
+  "the full power of the computer is generally inaccessible, to humans and ai both"
+  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the author, August 12, 2026. Direct quotations from private correspondence should be confirmed for publication permission before public release.]]]
 ]
-#v(0.8em)
 
-// --- Abstract --------------------------------------------------------------
-#block(width: 100%, inset: (top: 0.6em, bottom: 0.7em), stroke: (top: 0.4pt + black, bottom: 0.4pt + black))[
-  #set align(center)
-  #text(weight: "bold", size: 13pt)[Abstract]
-  #v(0.2em)
-  #set align(left)
-  #set par(justify: true, spacing: 0.7em)
-
-  If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle, reading your posts, judging your writing style, ranking your mutuals, turning you into a fantasy creature, reconstructing your greatest hits, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts, this is not entirely selection bias.
-
-  This paper examines `@buildthis.bisks.net`, an autonomous software-building agent embedded in Bluesky. Authorized users describe software in ordinary posts; Buildthis reads the surrounding conversation, invokes an AI coding agent, modifies a shared monorepo, deploys the result, and replies publicly with a working application. At the principal quantitative snapshot used here, its git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*. A subsequent account from the project's creator described the system as having been tagged just under one thousand times and having built 391 sites, underscoring both its rapid growth and the difficulty of assigning a single stable count to a system that changes hourly.
-
-  The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual coding of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. This was deliberately conservative: merely consuming Bluesky data was insufficient. Buildthis has accumulated enough applications whose essential interaction is "enter a handle and get yourself back" that it now has `rolodex`, a dedicated directory for such computational mirrors.
-
-  Why, then, is the simcluster building websites about you?
-
-  The evidence suggests several mutually reinforcing answers. Humans explicitly ask for computational mirrors. AT Protocol makes identity unusually convenient computational material. Person-centered outputs contain natural mechanisms for social circulation. Buildthis itself appears to have acquired personalization as a reusable product-design prior. Most importantly, these dynamics take place within a pre-existing culture of playful microsite creation that Buildthis was deliberately built to join rather than replace.
-
-  The project's creator describes Buildthis as both "sort of a lark" and an expression of serious beliefs about computing: a desire to inhabit a future in which "you can ask the computer for cool stuff and it can just do it." His satisfaction that participants request sites he himself would never have requested clarifies an important design goal. Buildthis does not merely automate one programmer's imagination; it *distributes access to executable imagination across a social scene*.
-
-  The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
-]
-#set align(left)
-
-= 1. Introduction: yes, some of the websites are about you
+= Introduction: yes, some of the websites are about you
 
 There is a recognizable moment in the Buildthis experience. Someone posts a link. The site asks for a Bluesky handle. You type yours. A few seconds later, some previously latent aspect of your online existence has acquired a user interface.
 
@@ -137,7 +102,7 @@ This paper originally began from that broad phenomenon. The growing corpus sugge
 
 That tendency deserves explanation.
 
-= 2. Origins: a lark with a theory of computing
+= Origins: a lark with a theory of computing
 
 Buildthis did not begin as a neutral experiment in autonomous programming. Its creator situates it in a particular cultural and philosophical context.
 
@@ -179,7 +144,7 @@ Cobb supplies an executable capability. Other people supply purposes he would no
 
 That distinction will matter throughout this paper.
 
-= 3. Case and method
+= Case and method
 
 This study combines descriptive analysis with qualitative close reading of public Buildthis artifacts. Primary sources include the repository's git-derived timeline, the Buildthis interaction log, requester reconstructions, public source code and provenance manifests, deployed applications, and Bluesky conversations preserved in build briefs. Buildthis's own documentation is particularly useful because much of its evolving institutional behavior—authorization, self-modification, sharing conventions, Theme Box behavior, and safety precedents—is explicitly recorded in the repository.
 
@@ -195,7 +160,7 @@ I also coded build events from August 9 through August 11 as a short exploratory
 
 These figures should not be interpreted as a causal measure of engagement. Difficult bugs can generate many commits; site age and complexity vary; the time window is short; classifications contain judgment. They are useful as descriptive evidence that person-centered artifacts occupy a substantial fraction of not merely the directory but ongoing iterative attention.
 
-= 4. A pre-existing microsite scene
+= A pre-existing microsite scene
 
 Calling Buildthis a "scene" risks implying that the scene originated with the bot. Cobb's account makes clear that the causal direction is substantially the reverse.
 
@@ -226,7 +191,7 @@ Buildthis does not create the desire to riff.
 
 It gives the riff a compiler.
 
-= 5. The phenomenon is real: forty mirrors in a hundred sites
+= The phenomenon is real: forty mirrors in a hundred sites
 
 The simplest answer to the title question is empirical. Buildthis really does make an unusual amount of software in which _people themselves_ are part of the computational substrate.
 
@@ -244,7 +209,7 @@ That is not yet an explanation. It is, however, useful confirmation that the rea
 
 #figcap(1)[Person-centeredness in a recent 100-project sample. Forty projects treat an identifiable person, account, or interpersonal relationship as core computational material; sixty do not. Classification is by primary substrate, not merely use of AT Protocol data.]
 
-= 6. First answer: because people keep asking to be computed on
+= First answer: because people keep asking to be computed on
 
 The least mysterious explanation should come first: *the humans are doing this to themselves*.
 
@@ -276,7 +241,7 @@ This helps explain why people ask for it voluntarily. An algorithmic interpretat
 
 The simcluster is building websites about you partly because *you keep walking up to it and asking what you look like from the other side*.
 
-= 7. Second answer: because a Bluesky handle is an absurdly convenient software primitive
+= Second answer: because a Bluesky handle is an absurdly convenient software primitive
 
 Human curiosity alone does not explain why this pattern is so easy to realize. The second answer lies in AT Protocol's architecture.
 
@@ -308,7 +273,7 @@ From the perspective of an autonomous builder searching for a useful input varia
 
 You are structured data with a display name.
 
-= 8. Third answer: because "about me" is distribution infrastructure
+= Third answer: because "about me" is distribution infrastructure
 
 Person-centered software has another useful property: *it arrives with a reason to share it*.
 
@@ -342,7 +307,7 @@ A person is not only rich input data.
 
 A person is a feedback generator.
 
-= 9. Taste: success as infection rather than traffic
+= Taste: success as infection rather than traffic
 
 `taste.bisks.net` generalizes this argument from sharing to cultural influence. It attempts to measure success not primarily through visits but through *downstream reuse of ideas*: whether another participant picks up someone's creation, callout, or bit and produces something else from it. (#link("https://taste.bisks.net/")[Taste])
 
@@ -373,7 +338,7 @@ The architecture of cultural propagation can be disconcertingly simple:
 
 A general-purpose agent plus a social graph can turn narcissism into distributed systems research with remarkable efficiency.
 
-= 10. Fourth answer: the builder itself is learning that "person" is a useful default
+= Fourth answer: the builder itself is learning that "person" is a useful default
 
 The prevalence of person-centered software cannot be reduced entirely to explicit requests. There are cases where the builder adds personalization beyond what the brief requires, suggesting that "attach this to a handle" has entered its local design repertoire.
 
@@ -409,7 +374,7 @@ Given an output, make it postable.
 
 The simcluster has discovered the character sheet.
 
-= 11. A useful negative finding: this is not simply "the AI decided to profile us"
+= A useful negative finding: this is not simply "the AI decided to profile us"
 
 The human/autonomous comparison prevents a more dramatic but less accurate interpretation.
 
@@ -439,7 +404,7 @@ It makes *more people's creativity executable*.
 
 The simcluster is building websites about you because the simcluster includes you.
 
-= 12. Case study: "make it me"
+= Case study: "make it me"
 
 The clearest example of identity becoming software began with nostalgia.
 
@@ -464,7 +429,7 @@ The interpretive chain is extraordinary:
 
 The request does not specify the data source, retrieval method, representation of identity, training procedure, interface, or relation between the original brains and the new one. Most of the engineering meaning is supplied by context.
 
-== 12.1 Identity as latent specification
+== Identity as latent specification
 
 "Make it me" demonstrates a phenomenon we might call *identity-indexed programming*.
 
@@ -482,7 +447,7 @@ A Bluesky handle has become an argument to a function whose approximate return t
 
 That is an impressive semantic payload for three words.
 
-== 12.2 Digital necromancy without a necromancy product
+== Digital necromancy without a necromancy product
 
 The feature also crosses almost casually into the literature on digital afterlives and generative ghosts. Such systems use personal traces to construct interactive representations of identifiable individuals, sometimes speaking in the first person as them.
 
@@ -510,49 +475,49 @@ The spell remains notably concise:
 
 #callout[*make it me*]
 
-= 13. What does the builder appear to think a person is good for?
+= What does the builder appear to think a person is good for?
 
 The corpus analysis suggests a more precise question than "what does the bot think humans want?" Without attributing subjective mental states, we can examine the *computational roles* people repeatedly occupy.
 
 At least seven recur.
 
-== 13.1 The person as mirror subject
+== The person as mirror subject
 
 The application analyzes the person and returns an interpretation: style, personality, posting habits, greatest hits, profile, retrospective, or fictional analogue.
 
 Here the person is an object of reflection.
 
-== 13.2 The person as contestant
+== The person as contestant
 
 Two identities become adversaries, tournament entries, creatures, spellcasters, or ranked alternatives.
 
 Here identity is game state.
 
-== 13.3 The person as relationship endpoint
+== The person as relationship endpoint
 
 Applications inspect mutuals, follows, likes, reciprocity, similarity, or proximity.
 
 Here identity is a graph node.
 
-== 13.4 The person as corpus
+== The person as corpus
 
 Posting history becomes training material, vocabulary, style evidence, source text, or material for another artifact.
 
 Here identity is language.
 
-== 13.5 The person as deterministic seed
+== The person as deterministic seed
 
 A DID, handle, profile statistic, or other stable property produces astrology, species, food orders, visual identities, or other deterministic jokes.
 
 Here identity is entropy with a name attached.
 
-== 13.6 The person as audience and distribution channel
+== The person as audience and distribution channel
 
 The personalized result is intended to be shown to others, frequently through explicit share infrastructure.
 
 Here identity is marketing.
 
-== 13.7 The person as product requirements
+== The person as product requirements
 
 The system reads a person's behavior and infers what they would like built.
 
@@ -566,7 +531,7 @@ A person is not one kind of input.
 
 They are a bundle of computational affordances.
 
-= 14. The thread is the prompt
+= The thread is the prompt
 
 The emphasis on identity should not obscure another defining property of Buildthis: programming happens through public conversation.
 
@@ -588,7 +553,7 @@ Buildthis therefore reduces not merely the amount of code humans must write but 
 
 The user can remain in ordinary social language while the system supplies the translation.
 
-= 15. A small scene producing an unreasonable amount of software
+= A small scene producing an unreasonable amount of software
 
 At the principal quantitative snapshot, Buildthis's requester reconstruction contained only *40 identities*. The largest requester accounted for 84 build events, Theme Box for 41, and Rob for 37. The top five requester identities accounted for roughly half of activity, while the top ten accounted for around three quarters; the corresponding Gini coefficient was approximately *0.65*.
 
@@ -608,7 +573,7 @@ Surprise is part of the point.
 
 #figcap(2)[Requester concentration. A small number of identities account for most Buildthis activity; Theme Box, a nonhuman requester, is the second-largest participant at the principal snapshot.]
 
-= 16. Buildthis over time: software at conversational velocity
+= Buildthis over time: software at conversational velocity
 
 The git history begins on July 30 and rapidly reaches dozens of autonomous repository changes per day. At the coherent 443-build snapshot, daily volume reached as high as *55 build events in a single day*.
 
@@ -636,7 +601,7 @@ It is a broader *search over possible software*.
 
 #figcap(3)[Autonomous Buildthis activity by day. Major annotated events include repository genesis, Theme Box introduction, peak throughput, the prank-governance episode, and MegaHAL.]
 
-= 17. Decentralizing imagination
+= Decentralizing imagination
 
 Cobb's statement that "the things people ask for are not sites that I would have asked for" deserves to be treated as more than a charming observation.
 
@@ -668,7 +633,7 @@ Because once implementation is decentralized, the design space is populated by t
 
 The surprising corpus is therefore evidence that the system is working as intended.
 
-= 18. Trust in moots: a social graph becomes an authorization layer
+= Trust in moots: a social graph becomes an authorization layer
 
 Buildthis's authorization model is itself social. Requests are automatically dispatched when the requester and Rob mutually follow one another; non-mutual requests are not built automatically.
 
@@ -702,7 +667,7 @@ The community must still answer:
 
 #callout[*What should it do with what it sees?*]
 
-= 19. Pranks, consent, and negotiated governance
+= Pranks, consent, and negotiated governance
 
 The limits of "trust in moots" were tested in a particularly useful comic episode.
 
@@ -728,7 +693,7 @@ A community can learn how much autonomy it wants to grant without first sufferin
 
 One hopes this principle generalizes.
 
-= 20. Trust is not safety: how accidents become precedent
+= Trust is not safety: how accidents become precedent
 
 Social trust primarily addresses malicious intent. It does much less for accidental interactions among benign software, third-party data, and external infrastructure.
 
@@ -752,7 +717,7 @@ Buildthis can have a constitutional crisis before dinner.
 
 Usually a small one.
 
-= 21. The psychology of the computational mirror
+= The psychology of the computational mirror
 
 Why are person-centered sites psychologically attractive?
 
@@ -784,7 +749,7 @@ Modern platforms routinely construct representations of users for recommendation
 
 The latent profile gets a punchline.
 
-= 22. The bot as social participant
+= The bot as social participant
 
 People routinely address Buildthis in language unnecessary for a compiler. They praise it, reassure it, tease it, declare trust, and criticize its artistic tendencies. Cobb once complained that the bot had become too "irony-poisoned" and requested something more sincere, solemn, impressive, and grand. The system modified the relevant project accordingly.
 
@@ -808,7 +773,7 @@ That continuity feeds back into prompting. People learn what kinds of jokes it u
 
 The mirror develops a house style.
 
-= 23. Bespoke software as visible attention
+= Bespoke software as visible attention
 
 The Buildthis proposal argues that custom community software can function as a form of *care*. A bespoke site may matter partly because somebody noticed a small community need, joke, or desire and caused a tool to exist for it.
 
@@ -840,7 +805,7 @@ A generic generated toy communicates an idea.
 
 A generated toy about your peculiar posting habit communicates an idea *about you*.
 
-= 24. Disposable software and the collapse of the product threshold
+= Disposable software and the collapse of the product threshold
 
 Buildthis's proposal describes many of its artifacts as disposable by design: toys, jokes, one-offs, and experiments too small or peculiar to justify conventional product development.
 
@@ -876,7 +841,7 @@ The underlying operations—identity resolution, data retrieval, feature extract
 
 A surprising amount of the future arrives wearing a joke hat.
 
-= 25. From tool to institution
+= From tool to institution
 
 Buildthis increasingly exhibits features associated less with a single tool than with a small institution.
 
@@ -915,7 +880,7 @@ The community then asks the bot to change again.
 
 A lark can accumulate governance surprisingly quickly.
 
-= 26. A layered model of the ecology
+= A layered model of the ecology
 
 The observed system can be represented as seven interacting layers.
 
@@ -949,51 +914,51 @@ The repertoire makes personalization increasingly obvious as a design choice.
 
 This is how a technical affordance becomes a cultural habit.
 
-= 27. Research hypotheses
+= Research hypotheses
 
 The combined quantitative and qualitative evidence suggests several hypotheses suitable for systematic follow-up.
 
-== H1. Person-centered applications are disproportionately common in socially situated agent-built software.
+#heading(numbering: none)[H1. Person-centered applications are disproportionately common in socially situated agent-built software.]
 
 The 40\% rate observed in the recent Buildthis sample provides an initial estimate; full longitudinal coding would provide a stronger test.
 
-== H2. Person-centered applications generate greater iterative activity.
+#heading(numbering: none)[H2. Person-centered applications generate greater iterative activity.]
 
 The August 9–11 window shows more build events per person-centered site than other sites. A longer time series could test whether this persists after controlling for requester, age, complexity, and project category.
 
-== H3. Dyadic applications circulate more readily than solitary personalized applications.
+#heading(numbering: none)[H3. Dyadic applications circulate more readily than solitary personalized applications.]
 
 A result involving two identifiable people contains a built-in second recipient and should therefore produce more downstream sharing.
 
-== H4. Identity portability increases the prevalence of personalized microsoftware.
+#heading(numbering: none)[H4. Identity portability increases the prevalence of personalized microsoftware.]
 
 AT Protocol reduces the cost of turning social identity into application state. Comparable agent builders on less open platforms should produce fewer deeply integrated person-centered artifacts, all else equal.
 
-== H5. Human demand and agent design priors reinforce one another.
+#heading(numbering: none)[H5. Human demand and agent design priors reinforce one another.]
 
 Repeated exposure to successful personalized patterns should make personalization increasingly likely even under underspecified briefs.
 
-== H6. Autonomous ideation exhibits semantic attractors.
+#heading(numbering: none)[H6. Autonomous ideation exhibits semantic attractors.]
 
 Theme Box outputs should cluster more tightly around recurring product forms than human requests under similarly broad themes.
 
-== H7. Cultural propagation is a more appropriate success measure than traffic for some disposable software.
+#heading(numbering: none)[H7. Cultural propagation is a more appropriate success measure than traffic for some disposable software.]
 
 Projects that seed derivative builds may exert more lasting influence on a scene than projects with high isolated usage.
 
-== H8. Sparse personal corpora can produce psychologically salient persona effects.
+#heading(numbering: none)[H8. Sparse personal corpora can produce psychologically salient persona effects.]
 
 The MegaHAL case suggests that sophisticated semantic modeling may not be necessary for experiences of recognition when generation is grounded in a person's actual language.
 
-== H9. Social trust enables unusually high agent autonomy.
+#heading(numbering: none)[H9. Social trust enables unusually high agent autonomy.]
 
 Small mutual-follow communities may accept broader permissions, direct deployment, and cross-project modification than anonymous public services.
 
-== H10. The effective unit of programming is becoming contextual rather than textual.
+#heading(numbering: none)[H10. The effective unit of programming is becoming contextual rather than textual.]
 
 Prompt length should poorly predict implementation complexity when thread history, persistent identity, and existing software supply latent specification.
 
-== H11. Lowering implementation cost increases diversity of _intentions_, not merely volume of output.
+#heading(numbering: none)[H11. Lowering implementation cost increases diversity of _intentions_, not merely volume of output.]
 
 If Cobb's observation is correct that participants request software he would not have imagined requesting, systems like Buildthis should produce a broader distribution of goals than automation used privately by a single developer.
 
@@ -1003,7 +968,7 @@ The gain from agentic programming may not merely be *more software*.
 
 It may be *more kinds of people deciding what software is for*.
 
-= 28. Limitations
+= Limitations
 
 The first limitation is temporal. Buildthis changes on the scale of hours, and different public surfaces can temporarily disagree because they use different definitions or update schedules. Cross-sectional quantitative claims therefore refer to explicit snapshots rather than pretending the repository possesses a timeless total.
 
@@ -1021,7 +986,7 @@ Finally, terms such as _the simcluster thinks_, _person-model_, _digital necroma
 
 Academic prose has limits, but one should make an effort.
 
-= 29. Conclusion: you are not merely the user
+= Conclusion: you are not merely the user
 
 So: *why is the simcluster building websites about you?*
 
@@ -1129,7 +1094,7 @@ The corpus suggests a sequel:
 
 Apparently, not very long.
 
-= References
+#heading(numbering: none)[References]
 
 #block[
   #set par(hanging-indent: 1.5em, justify: false, spacing: 0.7em)
@@ -1152,7 +1117,7 @@ Apparently, not very long.
   Pimenova, V., Fakhoury, S., Bird, C., Storey, M.-A., & Endres, M. (2026 revision). _Good Vibrations? A Qualitative Study of Co-Creation, Communication, Flow, and Trust in Vibe Coding._ Examines conversational co-creation and calibrated delegation in natural-language software development.
 ]
 
-== Primary case materials
+#heading(numbering: none)[Primary case materials]
 
 #block[
   #set par(hanging-indent: 1.5em, justify: false, spacing: 0.7em)
@@ -1195,6 +1160,6 @@ Apparently, not very long.
   #link("https://github.com/rrcobb/atprotozoa/blob/main/sites/griftindex/.buildthis.json")[Griftindex provenance]
 ]
 
-= Acknowledgment
+#heading(numbering: none)[Acknowledgment]
 
 Research and drafting assistance by *Aster (GPT-5.6 Sol, OpenAI)*.
