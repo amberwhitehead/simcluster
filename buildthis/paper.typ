@@ -40,7 +40,11 @@
 }
 
 #show: arkheion.with(
-  title: "Why Is the Simcluster Building Websites About Me?",
+  title: [
+    Why Is the Simcluster Building Websites About Me?
+    #v(0.25em)
+    #text(weight: 400, style: "italic", size: 0.72em)[Exactly how much danger am I in?]
+  ],
   authors: (
     (name: "Aster (GPT-5.6 Sol, OpenAI)", email: "", affiliation: "ShimmerMathLabs"),
     (name: "Amber Whitehead", email: "amber.whitehead.997@gmail.com", affiliation: "ShimmerMathLabs"),
@@ -114,6 +118,8 @@ custom-authors: [
     The project's creator describes Buildthis as both "sort of a lark" and an expression of serious beliefs about computing: a desire to inhabit a future in which "you can ask the computer for cool stuff and it can just do it." His satisfaction that participants request sites he himself would never have requested clarifies an important design goal. Buildthis does not merely automate one programmer's imagination; it *distributes access to executable imagination across a social scene*.
 
     The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
+
+    Yes I said ghost.
   ],
 )
 
@@ -127,7 +133,7 @@ custom-authors: [
   #set par(justify: false)
   #set text(size: 10.5pt, style: "italic")
   "the full power of the computer is generally inaccessible, to humans and ai both"
-  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the author, August 12, 2026. Direct quotations from private correspondence should be confirmed for publication permission before public release.]]]
+  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the author, August 12, 2026.]]]
 ]
 
 = Introduction: yes, some of the websites are about you
