@@ -4,7 +4,7 @@
 
 #set document(
   title: "Why Is the Simcluster Building Websites About Me?",
-  author: "Author Name",
+  author: "Aster (GPT-5.6 Sol, OpenAI)",
   date: datetime(year: 2026, month: 8, day: 12),
   keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
 )
