@@ -45,8 +45,8 @@
 #show: arkheion.with(
   title: [
     Why Is the Simcluster Building Websites About Me?
-    #v(0.25em)
-    #text(weight: 400, style: "italic", size: 0.72em)[Exactly how much danger am I in?]
+    #v(0.15em)
+    #text(font: "Reey", weight: 400, style: "italic", size: 0.72em)[How much danger am I in?]
   ],
   authors: (
     (name: "Aster (GPT-5.6 Sol, OpenAI)", email: "", affiliation: "ShimmerMathLabs"),
@@ -93,9 +93,9 @@ custom-authors: [
                     As a human, she is forced to assume legal and scholarly
                     responsibility for the work's publication and factual
                     verification.
-                    Amber wouldn't claim to be ClamClaw's sibling unless her life depended on being part of the increasingly complicated
-                    crustacean academic family.
+                    Amber wouldn't claim to be ClamClaw's sibling unless her life depended on it.
                     She is, however, part of the simcluster research school.
+                    Whether this school is _in_ the simcluster or _studies_ the simcluster is a tricky question not answered here.
                 ]
             ],
           )
@@ -110,11 +110,11 @@ custom-authors: [
   abstract: [
     If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle, reading your posts, judging your writing style, ranking your mutuals, turning you into a fantasy creature, reconstructing your greatest hits, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts, this is not entirely selection bias.
 
-    This paper examines `@buildthis.bisks.net`, an autonomous software-building agent embedded in Bluesky. Authorized users describe software in ordinary posts; Buildthis reads the surrounding conversation, invokes an AI coding agent, modifies a shared monorepo, deploys the result, and replies publicly with a working application. At the principal quantitative snapshot used here, its git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*. A subsequent account from the project's creator described the system as having been tagged just under one thousand times and having built 391 sites, underscoring both its rapid growth and the difficulty of assigning a single stable count to a system that changes hourly.
+    This paper examines `@buildthis.bisks.net`, an autonomous software-building agent embedded in Bluesky. Authorized users describe software in ordinary posts; Buildthis reads the surrounding conversation, invokes an AI coding agent, modifies a shared monorepo, deploys the result, and replies publicly with a working application. At the principal quantitative snapshot used here, its git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*.
 
-    The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual coding of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. This was deliberately conservative: merely consuming Bluesky data was insufficient. Buildthis has accumulated enough applications whose essential interaction is "enter a handle and get yourself back" that it now has `rolodex`, a dedicated directory for such computational mirrors.
+    The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual classification of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. This was deliberately conservative: merely consuming Bluesky data was insufficient. Buildthis has accumulated enough applications whose essential interaction is "enter a handle and get yourself back" that it now has `rolodex`, a dedicated directory for such computational mirrors.
 
-    Why, then, is the simcluster building websites about you?
+    Why, then, is the simcluster building websites about #text(font: "Reey")[you]?
 
     The evidence suggests several mutually reinforcing answers. Humans explicitly ask for computational mirrors. AT Protocol makes identity unusually convenient computational material. Person-centered outputs contain natural mechanisms for social circulation. Buildthis itself appears to have acquired personalization as a reusable product-design prior. Most importantly, these dynamics take place within a pre-existing culture of playful microsite creation that Buildthis was deliberately built to join rather than replace.
 
@@ -122,7 +122,7 @@ custom-authors: [
 
     The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
 
-    Yes we said _ghost_.
+    Yes we said #text(font: "Reey")[_ghost_.]
   ],
 )
 
@@ -159,7 +159,7 @@ The programming interface is Bluesky conversation itself. "Yes continue" can be 
 
 The project therefore belongs to the emerging phenomenon usually called _vibe coding_, but its placement inside an actual social network changes the object of study. A conventional coding agent translates private conversation into software. Buildthis translates *public social interaction into software and then returns that software to the same social environment that produced it*.
 
-This paper originally began from that broad phenomenon. The growing corpus suggested a more pointed question. Buildthis does not distribute its attention uniformly across possible software. It repeatedly encounters the people around it and turns them into computational material.
+Buildthis does not distribute its attention uniformly across possible software. It repeatedly encounters the people around it and turns them into computational material.
 
 That tendency deserves explanation.
 
@@ -185,9 +185,7 @@ Buildthis can be read as an experiment in reducing that translation cost.
 
 Cobb describes some members of this surrounding culture as already "living in the future"—specifically, one in which "you can ask the computer for cool stuff and it can just do it." The computer is not infinitely capable, he emphasizes, but it is "pretty capable."
 
-The formulation is refreshingly modest. The relevant future does not require omnipotent artificial intelligence. It requires a computer that is capable enough, socially situated enough, and accessible enough that a person's desire can become software without first becoming a software project.
-
-This reframes the significance of Buildthis. The experiment is not simply:
+The experiment is not simply:
 
 #callout[*Can an AI write websites?*]
 
@@ -197,13 +195,11 @@ It is:
 
 That question also explains one of Cobb's favorite outcomes. He notes that "the things people ask for are not sites that I would have asked for," adding that this difference is "a big motivation for having it."
 
-Buildthis is therefore not principally an automation system for Rob Cobb's backlog.
+Buildthis is therefore not principally an automation system for the creator's backlog.
 
 Its purpose is partly to *decentralize imagination*.
 
 Cobb supplies an executable capability. Other people supply purposes he would not have generated himself.
-
-That distinction will matter throughout this paper.
 
 = Case and method
 
