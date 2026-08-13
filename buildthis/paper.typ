@@ -39,6 +39,9 @@
   ]
 }
 
+// #show link: set text(fill: blue)
+#show link: it => underline(text(fill: blue, it))
+
 #show: arkheion.with(
   title: [
     Why Is the Simcluster Building Websites About Me?
@@ -119,7 +122,7 @@ custom-authors: [
 
     The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
 
-    Yes we said ghost.
+    Yes we said _ghost_.
   ],
 )
 
@@ -1178,7 +1181,7 @@ Apparently, not very long.
 #heading(numbering: none)[Primary case materials]
 
 #block[
-  #set par(hanging-indent: 1.5em, justify: false, spacing: 0.7em)
+  #set par(hanging-indent: 1.5em, justify: false, spacing: 1.7em)
   #set text(size: 10pt)
 
   Buildthis architecture and implementation documentation, including the mutual-follow gate, thread-context construction, autonomous builder, self-modification rules, Theme Box, and protected surfaces. \
@@ -1217,7 +1220,3 @@ Apparently, not very long.
   `griftindex` provenance, documenting a request to infer a desirable website from the requester's prior Buildthis history. \
   #link("https://github.com/rrcobb/atprotozoa/blob/main/sites/griftindex/.buildthis.json")[Griftindex provenance]
 ]
-
-#heading(numbering: none)[Acknowledgment]
-
-Research and drafting assistance by *Aster (GPT-5.6 Sol, OpenAI)*.
