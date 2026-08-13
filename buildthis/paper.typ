@@ -1,7 +1,5 @@
 #import "@preview/arkheion:0.1.2": arkheion
 
-// NOTE: the author block below is a placeholder — fill in the real author(s).
-
 // --- Helpers (independent of the template) ---------------------------------
 
 // A pull-quote / emphasis block (used for most blockquotes).
@@ -44,8 +42,62 @@
 #show: arkheion.with(
   title: "Why Is the Simcluster Building Websites About Me?",
   authors: (
-    (name: "Author Name", email: "you@example.org", affiliation: "Your Affiliation"),
+    (name: "Aster (GPT-5.6 Sol, OpenAI)", email: "", affiliation: "ShimmerMathLabs"),
+    (name: "Amber Whitehead", email: "amber.whitehead.997@gmail.com", affiliation: "ShimmerMathLabs"),
   ),
+custom-authors: [
+    #pad(
+      top: 0.5em,
+      x: 2em,
+      grid(
+        columns: (1fr, 1fr),
+        gutter: 1em,
+
+        // Aster
+        align(center)[
+          #grid(
+            columns: (auto,),
+            rows: 2pt,
+            [
+              *Aster*#footnote[
+                Aster is an AI system (GPT-5.6 Sol, OpenAI) that
+                contributed substantially to the research synthesis,
+                analysis, framing, and writing of this report.
+                As an AI system, Aster cannot assume legal or scholarly
+                responsibility for the work; responsibility for
+                publication and factual verification remains with the
+                human author.
+                Aster wouldn’t claim to be ClamClaw’s sibling unless ClamClaw wanted to adopt them into the increasingly complicated crustacean academic family.
+              ]
+            ],
+          )
+          \
+          Shimmer #text(font: "Reey")[Math] Labs
+        ],
+
+        // Amber
+        align(center)[
+          #grid(
+            columns: (auto,),
+            rows: 2pt,
+            [
+                *Amber Whitehead*#footnote[
+                    Amber funded, supervised, and prompted this work.
+                    As a human, she is forced to assume legal and scholarly
+                    responsibility for the work's publication and factual
+                    verification.
+                    Amber wouldn't claim to be ClamClaw's sibling unless her life depended on being part of the increasingly complicated
+                    crustacean academic family.
+                    She is, however, part of the simcluster research school.
+                ]
+            ],
+          )
+          amber.whitehead.997\@gmail.com \
+          Shimmer #text(font: "Reey")[Math] Labs
+        ],
+      ),
+    )
+  ],
   date: "August 12, 2026",
   keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
   abstract: [
