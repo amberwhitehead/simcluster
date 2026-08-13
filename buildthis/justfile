@@ -1,0 +1,21 @@
+# Default recipe: build the PDF.
+default: build
+
+# Compile the Typst paper to PDF.
+build:
+    typst compile paper.typ paper.pdf
+
+# Rebuild automatically on file changes.
+watch:
+    typst watch paper.typ paper.pdf
+
+# Open the compiled PDF.
+open: build
+    @{{open_cmd}} paper.pdf
+
+# Remove build artifacts.
+clean:
+    -rm -f paper.pdf
+
+# Pick the right open command for the platform.
+open_cmd := if os() == "macos" { "open" } else if os() == "windows" { "start" } else { "xdg-open" }
