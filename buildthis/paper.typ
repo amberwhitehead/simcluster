@@ -74,7 +74,6 @@ custom-authors: [
                 responsibility for the work; responsibility for
                 publication and factual verification remains with the
                 human author.
-                Aster wouldn’t claim to be ClamClaw’s sibling unless ClamClaw wanted to adopt them into the increasingly complicated crustacean academic family.
               ]
             ],
           )
@@ -93,7 +92,6 @@ custom-authors: [
                     As a human, she is forced to assume legal and scholarly
                     responsibility for the work's publication and factual
                     verification.
-                    Amber wouldn't claim to be ClamClaw's sibling unless her life depended on it.
                     She is, however, part of the simcluster research school.
                     Whether this school is _in_ the simcluster or _studies_ the simcluster is a tricky question not answered here.
                 ]
@@ -108,21 +106,17 @@ custom-authors: [
   date: "August 12, 2026",
   keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
   abstract: [
-    If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle, reading your posts, judging your writing style, ranking your mutuals, turning you into a fantasy creature, reconstructing your greatest hits, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts, this is not entirely selection bias.
+    If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle—reading your posts, ranking your mutuals, turning you into a fantasy creature, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts—this is not entirely selection bias.
 
     This paper examines `@buildthis.bisks.net`, an autonomous software-building agent embedded in Bluesky. Authorized users describe software in ordinary posts; Buildthis reads the surrounding conversation, invokes an AI coding agent, modifies a shared monorepo, deploys the result, and replies publicly with a working application. At the principal quantitative snapshot used here, its git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*.
 
-    The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual classification of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. This was deliberately conservative: merely consuming Bluesky data was insufficient. Buildthis has accumulated enough applications whose essential interaction is "enter a handle and get yourself back" that it now has `rolodex`, a dedicated directory for such computational mirrors.
+    The striking feature of the resulting corpus is not simply its size but its recurrent choice of subject: *people*. In a manual classification of 100 recent distinct projects, *40\% treated an identifiable person, social-media account, or interpersonal relationship as a core input or subject*. The coding was deliberately conservative: merely consuming Bluesky data was insufficient to qualify. The corpus now includes `rolodex`, a dedicated directory for sites whose essential interaction is "enter a handle and get yourself back".
 
     Why, then, is the simcluster building websites about #text(font: "Reey")[you]?
 
-    The evidence suggests several mutually reinforcing answers. Humans explicitly ask for computational mirrors. AT Protocol makes identity unusually convenient computational material. Person-centered outputs contain natural mechanisms for social circulation. Buildthis itself appears to have acquired personalization as a reusable product-design prior. Most importantly, these dynamics take place within a pre-existing culture of playful microsite creation that Buildthis was deliberately built to join rather than replace.
+    The evidence suggests several mutually reinforcing answers: humans explicitly ask for computational mirrors; AT Protocol makes identity unusually convenient computational material; person-centered outputs circulate socially; and the builder itself appears to have acquired personalization as a reusable product-design prior—all within a pre-existing culture of playful microsite creation that Buildthis was deliberately built to join rather than replace.
 
-    The project's creator describes Buildthis as both "sort of a lark" and an expression of serious beliefs about computing: a desire to inhabit a future in which "you can ask the computer for cool stuff and it can just do it." His satisfaction that participants request sites he himself would never have requested clarifies an important design goal. Buildthis does not merely automate one programmer's imagination; it *distributes access to executable imagination across a social scene*.
-
-    The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*. The user is no longer merely the audience for an application. Increasingly, the user is also its data, subject matter, specification, distribution mechanism, and occasionally its ghost.
-
-    Yes we said #text(font: "Reey")[_ghost_.]
+    The project's creator describes Buildthis as both "sort of a lark" and an expression of serious beliefs about computing: a desire to inhabit a future in which "you can ask the computer for cool stuff and it can just do it." His satisfaction that participants request sites he himself would never have requested clarifies the design goal: Buildthis does not merely automate one programmer's imagination; it *distributes access to executable imagination across a social scene*. The resulting system is best understood not simply as vibe coding on a social network, but as *socially situated software production in which identity itself has become a software primitive*—the user is no longer merely the audience for an application, but increasingly its data, subject matter, specification, and distribution mechanism.
   ],
 )
 
@@ -161,8 +155,6 @@ The project therefore belongs to the emerging phenomenon usually called _vibe co
 
 Buildthis does not distribute its attention uniformly across possible software. It repeatedly encounters the _people around it_ and _turns them into computational material_.
 
-That tendency deserves explanation.
-
 = Origins: a lark with a theory of computing
 
 Buildthis did not begin as a neutral experiment in autonomous programming. Its creator situates it in a particular cultural and philosophical context.
@@ -197,41 +189,11 @@ Buildthis is therefore not principally an automation system for the creator's ba
 
 Its purpose is to #text(font: "Reey")[decentralize imagination].
 
-= Case and method
-
-This study combines descriptive analysis with qualitative close reading of public Buildthis artifacts. Primary sources include the repository's git-derived timeline, the Buildthis interaction log, requester reconstructions, public source code and provenance manifests, deployed applications, and Bluesky conversations preserved in build briefs. Buildthis's own documentation is particularly useful because much of its evolving institutional behavior—authorization, self-modification, sharing conventions, Theme Box behavior, and safety precedents—is explicitly recorded in the repository.
-
-A further source, `receipts.bisks.net`, is analytically unusual. At a participant's request, Buildthis read its own project manifests and produced a retrospective "roast" of the requests it had received, organizing them into recurring requesters, persistent bits, and recurring design genres. The factual substrate comes from repository manifests, while the interpretive commentary is generated by the builder itself. Receipts is therefore used here not as an independent measurement of the corpus, but as an *emic interpretation produced from within the system under study*. (#link("https://receipts.bisks.net/")[Receipts])
-
-This distinction matters methodologically. Receipts currently describes *409 human asks*, while the 443 figure used above counts build events from an earlier coherent timeline snapshot; these are different units measured at different times and should not be merged. What Receipts offers is not a replacement for the hand-coded dataset but something arguably more valuable: an emic machine interpretation that independently lands on several of the patterns identified from outside.
-
-A small amount of creator testimony is also incorporated. On August 12, 2026, we asked Cobb about the project's origins, whether it had developed as expected, and the broader culture in which he understood it. His response is treated here as creator perspective rather than as an authoritative account of all community motivations.
-
-The project's public counters measure different units. The timeline calls itself a "repo's-eye view": it reconstructs commits that actually landed and, at the principal snapshot, reported *443 autonomous builds across 224 sites*. The separate scene reconstruction reported *40 requester accounts across 228 sites*. (#link("https://bisks.net/timeline/")[timeline]) Cobb's later same-day description referred to just under one thousand tags and *391 sites*. These figures are not necessarily contradictory: tags, build commits, directories, distinct deployable sites, and creator-side counts measure related but different objects at different moments.
-
-Rather than silently forcing the numbers to agree, this paper treats the 443-build snapshot as a coherent quantitative cross-section and later counts as evidence of continued growth.#footnote[Distributed systems eventually teach even qualitative researchers to become suspicious of apparently innocent nouns such as _site_, _user_, and _event_.]
-
-For the analysis of person-centered design, we manually classified *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
-
-We also coded build events from August 9 through August 11 as a short exploratory window for iteration. Those three days contained 33, 16, and 31 build events respectively, or *80 events*. Of these, *47 (58.8\%)* modified projects coded as person-centered. Across distinct sites represented during the window, person-centered sites averaged approximately *1.88 build events per site*, compared with *1.50* for the remainder.
-
-These figures should not be interpreted as a causal measure of engagement. Difficult bugs can generate many commits; site age and complexity vary; the time window is short; classifications contain judgment. They are useful as descriptive evidence that person-centered artifacts occupy a substantial fraction of not merely the directory but ongoing iterative attention.
-
-= A pre-existing microsite scene
-
-Calling Buildthis a "scene" risks implying that the scene originated with the bot. Cobb's account makes clear that the causal direction is substantially the reverse.
-
-He describes feeling "compelled to try to participate and be cool like how all these other folks are cool." The line is jokingly self-deprecating, but sociologically useful. Buildthis emerged partly from *mimesis*: people observe other people producing culturally valued artifacts and develop a desire to participate in the same mode of production.
+Buildthis emerged partly from *mimesis*: people observe other people producing culturally valued artifacts and develop a desire to participate in the same mode of production. Cobb describes feeling "compelled to try to participate and be cool like how all these other folks are cool." The line is jokingly self-deprecating, but sociologically useful.
 
 The relevant mode is the playful microsite: small, self-contained, often highly specific web artifacts that may function as games, jokes, utilities, art objects, visualizations, or responses to other people's work. They do not necessarily aspire to become products. Their value frequently lies in specificity, immediacy, craft, social reference, or the pleasure of having made something at all.
 
-Buildthis changes this practice by reducing its technical bottleneck.
-
-Before Buildthis, one participant might see another person's idea and spend an evening implementing a riff. With Buildthis, the riff can be requested publicly and may exist before the surrounding conversation dissipates.
-
-This makes software creation *more conversationally synchronized* with the culture producing it.
-
-The distinction is subtle but important. The system is not merely accelerating programming. It is allowing programming to occur at approximately the tempo of social improvisation.
+Buildthis changes this practice by reducing its technical bottleneck. Before Buildthis, one participant might see another person's idea and spend an evening implementing a riff. With Buildthis, the riff can be requested publicly and may exist before the surrounding conversation dissipates. The system is not merely accelerating programming; it is allowing programming to occur at approximately the tempo of social improvisation.
 
 That may be one reason Cobb emphasizes AT Protocol itself as part of what is "beautiful" about the scene: people can "riff with each other's ideas in the open." The openness is both cultural and architectural. Public posts and portable identities provide material; small web projects provide responses; other people can see both the prompt and the artifact.
 
@@ -248,6 +210,26 @@ Buildthis does not create the desire to riff.
 
 It gives the riff a compiler.
 
+= Case and method
+
+This study combines descriptive analysis with qualitative close reading of public Buildthis artifacts. Primary sources include the repository's git-derived timeline, the Buildthis interaction log, requester reconstructions, public source code and provenance manifests, deployed applications, and Bluesky conversations preserved in build briefs. Buildthis's own documentation is particularly useful because much of its evolving institutional behavior—authorization, self-modification, sharing conventions, Theme Box behavior, and safety precedents—is explicitly recorded in the repository.
+
+A further source, `receipts.bisks.net`, is analytically unusual. At a participant's request, Buildthis read its own project manifests and produced a retrospective "roast" of the requests it had received, organizing them into recurring requesters, persistent bits, and recurring design genres. The factual substrate comes from repository manifests, while the interpretive commentary is generated by the builder itself. Receipts is therefore used here not as an independent measurement of the corpus, but as an *emic interpretation produced from within the system under study*. (#link("https://receipts.bisks.net/")[Receipts])
+
+This distinction matters methodologically. Receipts currently describes *409 human asks*, while the 443 figure used above counts build events from an earlier coherent timeline snapshot; these are different units measured at different times and should not be merged. What Receipts offers is not a replacement for the hand-coded dataset but something arguably more valuable: an emic machine interpretation that independently lands on several of the patterns identified from outside.
+
+A small amount of creator testimony is also incorporated. On August 12, 2026, we asked Cobb about the project's origins, whether it had developed as expected, and the broader culture in which he understood it. His response is treated here as creator perspective rather than as an authoritative account of all community motivations.
+
+The project's public counters measure different units. The timeline calls itself a "repo's-eye view": it reconstructs commits that actually landed and, at the principal snapshot, reported *443 autonomous builds across 224 sites*. The separate scene reconstruction reported *40 requester accounts across 228 sites*. (#link("https://bisks.net/timeline/")[timeline]) Cobb's later same-day description referred to just under one thousand tags and *391 sites*. These figures are not necessarily contradictory: tags, build commits, directories, distinct deployable sites, and creator-side counts measure related but different objects at different moments.
+
+Rather than silently forcing the numbers to agree, this paper treats the 443-build snapshot as a coherent quantitative cross-section and later counts as evidence of continued growth.#footnote[Distributed systems eventually teach even qualitative researchers to become suspicious of apparently innocent nouns such as _site_, _user_, and _event_.]
+
+For the analysis of person-centered design, we manually classified *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
+
+We also coded build events from August 9 through August 11 as a short exploratory window for iteration. Those three days contained 33, 16, and 31 build events respectively. Of these 80, *47 (58.8\%)* modified projects coded as person-centered. Across distinct sites represented during the window, person-centered sites averaged approximately *1.88 build events per site*, compared with *1.50* for the remainder.
+
+These figures should not be interpreted as a causal measure of engagement. Difficult bugs can generate many commits; site age and complexity vary; the time window is short; classifications contain judgment. They are useful as descriptive evidence that person-centered artifacts occupy a substantial fraction of not merely the directory but ongoing iterative attention.
+
 = The phenomenon is real: forty mirrors in a hundred sites
 
 The simplest answer to the title question is empirical. Buildthis really does make an unusual amount of software in which _people themselves_ are part of the computational substrate.
@@ -258,7 +240,7 @@ Examples include systems that infer writing style and compare it with another ac
 
 The pattern is sufficiently visible that Buildthis has already constructed a meta-site devoted exclusively to it. `rolodex.bisks.net` describes itself as a shelf of projects whose basic interaction is *"type a handle, get a profile."* It explicitly excludes some network and multiplayer projects to focus on sites whose essential function is to "hand you back you." (#link("https://rolodex.bisks.net/")[Rolodex])
 
-Our person-centered coding also has an unexpected counterpart inside the ecosystem itself. After the analysis for this paper was performed, Buildthis was asked to retrospectively roast its own request history. Its resulting taxonomy independently notices many of the same recurrent forms. It identifies a 22-site "moot-industrial complex" in which people's mutuals repeatedly become game objects, characters, resources, and scenery, and separately recognizes whole-account personality diagnosis as a recurring request genre. Receipts is not an independent coder—the same underlying corpus and the same builder are involved—but the convergence is striking. The community's own machine has also noticed that it keeps turning people into things. (#link("https://receipts.bisks.net/")[Receipts])
+Our person-centered coding has an unexpected counterpart inside the ecosystem itself: Receipts, the retrospective described above, independently notices many of the same recurrent forms. It identifies a 22-site "moot-industrial complex" in which people's mutuals repeatedly become game objects, characters, resources, and scenery, and separately recognizes whole-account personality diagnosis as a recurring request genre. Receipts is not an independent coder—the same underlying corpus and the same builder are involved—but the convergence is striking. The community's own machine has also noticed that it keeps turning people into things. (#link("https://receipts.bisks.net/")[Receipts])
 
 The inventory is impressively specific. A handle can become a ranked "greatest hits" page, a GitHub-style activity grid, a Wikipedia parody, a literary retrospective, a marble monument, a mech-pilot card, DID astrology, a biological species, a McDonald's order, a sonnet assembled from the person's vocabulary, a personalized copypasta vocabulary, or a quiz measuring how well somebody knows the account.
 
@@ -310,8 +292,6 @@ Operationally, a handle can function as a pointer into a surprisingly rich publi
 
 $ "handle" -> "identity" -> "{profile, posts, follows, likes, graph relations, activity}". $
 
-For a small generated application, this is extraordinarily useful.
-
 A conventional personalized service might require registration, a database, onboarding, permissions, data import, and enough continued use to accumulate behavioral history. A Buildthis site can often begin with one field:
 
 #callout[handle: `__________`]
@@ -346,8 +326,6 @@ The progression is:
   "artifact about me and you",
 )
 
-Each step creates additional social attachment.
-
 Buildthis's repository has already formalized this intuition. Its sharing conventions say that virality should be a default design consideration. New projects generally receive one-tap Bluesky sharing, while projects with individualized results are encouraged to produce shareable result cards. (#link("https://github.com/rrcobb/atprotozoa/blob/main/notes/45-sharing-and-virality.md")[sharing conventions])
 
 The repository is therefore not merely optimized to create software.
@@ -360,13 +338,13 @@ The second question has a protagonist.
 
 Dyadic applications go further. Creature battles, style comparisons, social matching, mutual ranking, and favoritism games all contain an implicit mention target. Their data model doubles as a distribution model.
 
-This does not establish that personalized sites receive more traffic; Buildthis does not yet expose sufficient cross-site analytics to make that claim. The short-window build history does, however, provide suggestive evidence of sustained iterative attention. From August 9 through August 11, *58.8\% of all build events* involved sites coded as person-centered, and those sites averaged approximately *1.88 build events per distinct site*, compared with *1.50* among other sites.
+This does not establish that personalized sites receive more traffic; Buildthis does not yet expose sufficient cross-site analytics to make that claim. The short-window build history does, however, provide suggestive evidence of sustained iterative attention: in the August 9–11 window, person-centered sites drew both the majority of build events and more revisions per site than the rest (see Case and method).
 
 A person is not only rich input data.
 
 A person is a feedback generator.
 
-= Taste: success as infection rather than traffic
+== Taste: success as infection rather than traffic
 
 `taste.bisks.net` generalizes this argument from sharing to cultural influence. It attempts to measure success not primarily through visits but through *downstream reuse of ideas*: whether another participant picks up someone's creation, callout, or bit and produces something else from it. (#link("https://taste.bisks.net/")[Taste])
 
@@ -384,7 +362,7 @@ The resulting lineage resembles citation:
 
 Academic work accumulates influence when other work cites and extends it. Software libraries accumulate influence through dependencies. Buildthis ideas can accumulate influence when another participant asks the bot to mutate them into additional software.
 
-This is where Cobb's description of the surrounding microsite culture becomes especially useful. Buildthis was explicitly inspired by a community already engaged in public riffing. Taste is therefore not measuring an alien behavior introduced by the bot. It attempts to quantify a pre-existing cultural value: *did your thing cause somebody else to make another thing?*
+Taste is therefore not measuring an alien behavior introduced by the bot. It attempts to quantify a pre-existing cultural value of the riffing scene described above: *did your thing cause somebody else to make another thing?*
 
 Personalized applications are particularly effective at producing these reactions. Once one person receives a stylized portrait, ranking, duel, or account analysis, another person's natural response is often:
 
@@ -435,29 +413,17 @@ The simcluster has discovered the character sheet.
 
 Intriguingly, Buildthis's later retrospective commentary notices the same attractor. Receipts groups eight Theme Box "account versus account" projects together and mocks their tendency to instantiate essentially the same underlying comparison mechanic through different narrative skins. This should not be treated as independent statistical confirmation—the critic and the builder share infrastructure and history—but it is revealing that, asked to characterize its own corpus, the system itself makes essentially the same abstraction: *two accounts go in; a themed contest comes out.* (#link("https://receipts.bisks.net/")[Receipts])
 
-= A useful negative finding: this is not simply "the AI decided to profile us"
+== A useful negative finding: this is not simply "the AI decided to profile us"
 
 The human/autonomous comparison prevents a more dramatic but less accurate interpretation.
 
-Within the 100-project sample, person-centered projects were common among both human-requested and Theme Box work: approximately *38\% of human-requested projects* and *46\% of Theme Box projects* in the coded sample. The difference itself is not especially meaningful because Theme Box themes are human-selected and frequently constrain the available design space.
+Within the 100-project sample, person-centered projects were common among both human-requested and Theme Box work: approximately *38\% of human-requested projects* and *46\% of Theme Box projects*. The difference is not itself meaningful (see Limitations).
 
 The important finding is that *both sides sustain the pattern*.
 
 Humans repeatedly ask to be interpreted. AT Protocol makes interpretation technically easy. The builder has reusable patterns for turning people into artifacts. Personalized artifacts circulate. Circulation creates more requests. Repeated requests produce more examples from which the builder can draw.
 
-The causal loop is therefore closer to:
-
-#flow(
-  "human desire",
-  "person-centered artifact",
-  "social circulation",
-  "more human desire",
-  "stronger local design vocabulary",
-)
-
 Cobb's account reinforces this interpretation. He emphasizes not that the system has autonomously discovered one correct category of application, but that people use it to request things *he would not have requested himself*.
-
-This is a crucial distinction.
 
 Buildthis does not eliminate human creativity by automating implementation.
 
@@ -538,59 +504,17 @@ The spell remains notably concise:
 
 = What does the builder appear to think a person is good for?
 
-The corpus analysis suggests a more precise question than "what does the bot think humans want?" Without attributing subjective mental states, we can examine the *computational roles* people repeatedly occupy.
+The corpus analysis suggests a more precise question than "what does the bot think humans want?" Without attributing subjective mental states, we can examine the *computational roles* people repeatedly occupy. At least seven recur:
 
-At least seven recur.
+- *Mirror subject.* The application analyzes the person and returns an interpretation: style, personality, posting habits, greatest hits, or fictional analogue. The person is an object of reflection.
+- *Contestant.* Two identities become adversaries, tournament entries, creatures, spellcasters, or ranked alternatives. Identity is game state.
+- *Relationship endpoint.* Applications inspect mutuals, follows, likes, reciprocity, similarity, or proximity. Identity is a graph node.
+- *Corpus.* Posting history becomes training material, vocabulary, style evidence, or source text. Identity is language.
+- *Deterministic seed.* A DID, handle, or profile statistic produces astrology, species, food orders, or visual identities. Identity is entropy with a name attached.
+- *Audience and distribution channel.* The personalized result is meant to be shown to others, frequently through explicit share infrastructure. Identity is marketing.
+- *Product requirements.* The system reads a person's behavior and infers what they would like built. Identity becomes specification.
 
-== The person as mirror subject
-
-The application analyzes the person and returns an interpretation: style, personality, posting habits, greatest hits, profile, retrospective, or fictional analogue.
-
-Here the person is an object of reflection.
-
-== The person as contestant
-
-Two identities become adversaries, tournament entries, creatures, spellcasters, or ranked alternatives.
-
-Here identity is game state.
-
-== The person as relationship endpoint
-
-Applications inspect mutuals, follows, likes, reciprocity, similarity, or proximity.
-
-Here identity is a graph node.
-
-== The person as corpus
-
-Posting history becomes training material, vocabulary, style evidence, source text, or material for another artifact.
-
-Here identity is language.
-
-== The person as deterministic seed
-
-A DID, handle, profile statistic, or other stable property produces astrology, species, food orders, visual identities, or other deterministic jokes.
-
-Here identity is entropy with a name attached.
-
-== The person as audience and distribution channel
-
-The personalized result is intended to be shown to others, frequently through explicit share infrastructure.
-
-Here identity is marketing.
-
-== The person as product requirements
-
-The system reads a person's behavior and infers what they would like built.
-
-Here identity becomes specification.
-
-These roles overlap. A single application can treat a user simultaneously as corpus, character, audience, and share target.
-
-That multiplicity is why person-centered software is so generative.
-
-A person is not one kind of input.
-
-They are a bundle of computational affordances.
+These roles overlap: a single application can treat a user simultaneously as corpus, character, audience, and share target. That multiplicity is why person-centered software is so generative. A person is not one kind of input. They are a bundle of computational affordances.
 
 = The thread is the prompt
 
@@ -786,11 +710,7 @@ Usually a small one.
 
 Why are person-centered sites psychologically attractive?
 
-Social media has always involved negotiated visibility. Users construct posts for real and imagined audiences while increasingly understanding that algorithmic systems also observe, classify, and rank them. Research on social-media _self visibility_ describes this awareness of being visible not only to other people but to computational actors. Work on algorithmic self-portraits similarly investigates what happens when a platform's inferred model of the user becomes visible to that user.
-
-Buildthis performs an unusual inversion.
-
-Instead of algorithmic observation remaining infrastructural, it externalizes the inferred person as an object the user can inspect:
+As noted in the first answer, research on _self visibility_ and algorithmic self-portraits describes users' awareness of being observed and modeled by computational actors. Buildthis performs an unusual inversion of that arrangement: instead of algorithmic observation remaining infrastructural, it externalizes the inferred person as an object the user can inspect:
 
 #flow(
   "I post",
@@ -840,7 +760,7 @@ The mirror develops a house style.
 
 == From builder to critic
 
-Receipts adds a new social role: *critic*. At a participant's request, the same system responsible for translating social desires into software was asked to look backward across those desires and characterize what people had been doing with it. The result does more than enumerate builds. It constructs recurring characters ("repeat offenders"), genres, narrative arcs, running jokes, and judgments about taste. It is simultaneously archive and roast.
+Receipts adds a new social role: *critic*. The same system responsible for translating social desires into software looks backward across those desires and characterizes what people have been doing with it. The result does more than enumerate builds. It constructs recurring characters ("repeat offenders"), genres, narrative arcs, running jokes, and judgments about taste. It is simultaneously archive and roast.
 
 The site is explicit about the distinction between fact and interpretation. Its project records come from `site.json`; the editorializing, it says, is applied to the "vibes." From that mixture it tells stories about requesters, classifies recurring genres, identifies running jokes, accuses people of behavioral patterns, and even turns its criticism back on the person who requested the criticism. (#link("https://receipts.bisks.net/")[Receipts])
 
@@ -880,7 +800,7 @@ A generic generated toy communicates an idea.
 
 A generated toy about your peculiar posting habit communicates an idea *about you*.
 
-= Disposable software and the collapse of the product threshold
+== The collapse of the product threshold
 
 Buildthis's proposal describes many of its artifacts as disposable by design: toys, jokes, one-offs, and experiments too small or peculiar to justify conventional product development.
 
@@ -898,7 +818,7 @@ A program can now rationally exist:
 - to test an idea nobody is prepared to call a product;
 - because the joke becomes better if it has buttons.
 
-Cobb's description of the surrounding playful microsite culture supplies an important historical context for this shift. Disposable web artifacts are not new. What changes is their production cost and therefore their possible abundance.
+Disposable web artifacts are not new. What changes is their production cost and therefore their possible abundance.
 
 Cheap photography changed which moments deserved photographs.
 
@@ -932,18 +852,7 @@ It can acquire metrics because somebody made a joke about having Taste.
 
 It can acquire autonomous agenda formation because somebody thought it would be funny to let the bot invent websites every few hours.
 
-The feedback loop is:
-
-#flow(
-  "community behavior",
-  "software",
-  "consequences",
-  "discussion",
-  "new rules/software",
-  "changed behavior",
-)
-
-The agent sits inside this loop rather than merely servicing it.
+The agent sits inside a feedback loop rather than merely servicing it:
 
 Humans program the bot.
 
@@ -955,7 +864,7 @@ The community then asks the bot to change again.
 
 A lark can accumulate governance surprisingly quickly.
 
-Receipts is particularly revealing because a joke about institutional memory became institutional memory. The first request asked for a savage retrospective. A follow-up noticed that the retrospective itself could drift out of date. Buildthis responded by adding synchronization machinery and a standing rule that future builds update the archive. What began as mockery therefore became *reflexive infrastructure*: the system's history is now one of the things the system maintains. (#link("https://github.com/rrcobb/atprotozoa/blob/main/sites/receipts/.buildthis.json")[Receipts provenance])
+Receipts is particularly revealing here because a joke about institutional memory became institutional memory. A follow-up request noticed that the retrospective itself could drift out of date. Buildthis responded by adding synchronization machinery and a standing rule that future builds update the archive. What began as mockery therefore became *reflexive infrastructure*: the system's history is now one of the things the system maintains. (#link("https://github.com/rrcobb/atprotozoa/blob/main/sites/receipts/.buildthis.json")[Receipts provenance])
 
 = A layered model of the ecology
 
@@ -1011,39 +920,19 @@ The 40\% rate observed in the recent Buildthis sample provides an initial estima
 
 The August 9–11 window shows more build events per person-centered site than other sites. A longer time series could test whether this persists after controlling for requester, age, complexity, and project category.
 
-#heading(numbering: none)[H3. Dyadic applications circulate more readily than solitary personalized applications.]
-
-A result involving two identifiable people contains a built-in second recipient and should therefore produce more downstream sharing.
-
-#heading(numbering: none)[H4. Identity portability increases the prevalence of personalized microsoftware.]
+#heading(numbering: none)[H3. Identity portability increases the prevalence of personalized microsoftware.]
 
 AT Protocol reduces the cost of turning social identity into application state. Comparable agent builders on less open platforms should produce fewer deeply integrated person-centered artifacts, all else equal.
 
-#heading(numbering: none)[H5. Human demand and agent design priors reinforce one another.]
+#heading(numbering: none)[H4. Human demand and agent design priors reinforce one another.]
 
 Repeated exposure to successful personalized patterns should make personalization increasingly likely even under underspecified briefs.
 
-#heading(numbering: none)[H6. Autonomous ideation exhibits semantic attractors.]
-
-Theme Box outputs should cluster more tightly around recurring product forms than human requests under similarly broad themes.
-
-#heading(numbering: none)[H7. Cultural propagation is a more appropriate success measure than traffic for some disposable software.]
+#heading(numbering: none)[H5. Cultural propagation is a more appropriate success measure than traffic for some disposable software.]
 
 Projects that seed derivative builds may exert more lasting influence on a scene than projects with high isolated usage.
 
-#heading(numbering: none)[H8. Sparse personal corpora can produce psychologically salient persona effects.]
-
-The MegaHAL case suggests that sophisticated semantic modeling may not be necessary for experiences of recognition when generation is grounded in a person's actual language.
-
-#heading(numbering: none)[H9. Social trust enables unusually high agent autonomy.]
-
-Small mutual-follow communities may accept broader permissions, direct deployment, and cross-project modification than anonymous public services.
-
-#heading(numbering: none)[H10. The effective unit of programming is becoming contextual rather than textual.]
-
-Prompt length should poorly predict implementation complexity when thread history, persistent identity, and existing software supply latent specification.
-
-#heading(numbering: none)[H11. Lowering implementation cost increases diversity of _intentions_, not merely volume of output.]
+#heading(numbering: none)[H6. Lowering implementation cost increases diversity of _intentions_, not merely volume of output.]
 
 If Cobb's observation is correct that participants request software he would not have imagined requesting, systems like Buildthis should produce a broader distribution of goals than automation used privately by a single developer.
 
@@ -1075,65 +964,19 @@ Academic prose has limits, but one should make an effort.
 
 So: *why is the simcluster building websites about you?*
 
-Because you asked.
+Because you asked. Because your handle is a pointer, your posts are data, and your mutuals are edges. Because AT Protocol makes the person unusually cheap to compute on. Because a result about you arrives with a reason to share it—and a result about you *and somebody else* arrives with its audience already supplied. Because other people see your result and want one too. Because the builder has accumulated enough examples that "make it about the handle" sometimes appears even when nobody explicitly requested it. Because a pre-existing scene already considered small, playful, personal websites a meaningful way to participate in culture. And because Buildthis was deliberately built to let *other people decide what the computer should be for*.
 
-Because your handle is a powerful pointer.
+Cobb's founding belief is that the full power of computers remains inaccessible, and that the surrounding scene lives, at least partially, in a future where "you can ask the computer for cool stuff and it can just do it." What makes that future interesting is not only that the computer does more, but that once the interface barrier falls, people ask for things the system's creator did not anticipate. The capability escapes the imagination of the person who installed it—not in the science-fiction sense of autonomous rebellion, but in the much more ordinary and consequential sense that *other humans now get a turn*.
 
-Because your posts are data.
+And the process has folded over once more: with Receipts, the mirror is no longer pointed only at individual Bluesky accounts. *It is beginning to point at the scene.*
 
-Because your mutuals are edges.
-
-Because a result about you is something you might share.
-
-Because a result about you and somebody else arrives with its own audience.
-
-Because other people see your result and want one too.
-
-Because the builder has accumulated enough examples that "make it about the handle" sometimes appears even when nobody explicitly requested it.
-
-Because AT Protocol makes the person unusually cheap to compute on.
-
-Because a pre-existing scene already considered small, playful, personal websites a meaningful way to participate in culture.
-
-And because Buildthis was deliberately built to let *other people decide what the computer should be for*.
-
-Cobb's original motivation provides an illuminating bookend. One of his central beliefs is that the full power of computers remains inaccessible. He describes the surrounding scene as living, at least partially, in a future where:
-
-#callout[*"you can ask the computer for cool stuff and it can just do it."*]
-
-Buildthis demonstrates that this future is not interesting only because the computer does more.
-
-It is interesting because once the interface barrier falls, people ask for things the system's creator did not anticipate.
-
-The capability escapes the imagination of the person who installed it—not in the science-fiction sense of autonomous rebellion, but in the much more ordinary and consequential sense that *other humans now get a turn*.
-
-And now the process has folded over once more. After making hundreds of artifacts from the simcluster's desires, Buildthis has been asked to read the archive back to its participants and tell them what their desires look like in aggregate. The mirror is no longer pointed only at individual Bluesky accounts. *It is beginning to point at the scene.*
-
-And what do they do with that turn?
-
-A remarkable amount of the time, they point the computer back at themselves and one another.
-
-They ask what they look like.
-
-They ask who they resemble.
-
-They ask who would win.
-
-They ask who likes whom.
-
-They ask what their posts imply.
-
-They turn identities into creatures, scores, styles, archives, jokes, monuments, games, data, and models.
-
-They type:
+What do people do with that turn? A remarkable amount of the time, they point the computer back at themselves and one another. They ask what they look like, who they resemble, who would win, who likes whom. They turn identities into creatures, scores, archives, monuments, games, and models. They type:
 
 #callout[*make it me*]
 
 and the system takes them literally.
 
-The deepest change may therefore be that identity has become part of the programming environment. A Bluesky handle is simultaneously a name, persistent identifier, route to behavioral traces, graph location, personalization key, possible character, possible corpus, and possible share target.
-
-Under those conditions, "the user" ceases to be merely the person operating the software.
+The deepest change may therefore be that identity has become part of the programming environment. A Bluesky handle is simultaneously a name, persistent identifier, route to behavioral traces, graph location, personalization key, and possible share target. Under those conditions, "the user" ceases to be merely the person operating the software.
 
 The user can also be its subject.
 
@@ -1141,13 +984,7 @@ Its database.
 
 Its prompt.
 
-Its game state.
-
-Its aesthetic material.
-
 Its distribution channel.
-
-Its product requirements.
 
 And, in the MegaHAL case, several thousand posts' worth of raw material for a tiny statistical ghost.
 
@@ -1166,12 +1003,6 @@ _I think this about you._
 And now, increasingly:
 
 #callout[*I think this about you, and it has a URL.*]
-
-Buildthis began partly as an attempt to participate in a playful microsite scene and partly as an experiment in making the computer's latent capabilities easier to reach.
-
-By Cobb's own account, it has worked largely as expected.
-
-The more interesting surprise is what becomes visible once people are given that access.
 
 The earlier question was whether ordinary conversation could become executable.
 
