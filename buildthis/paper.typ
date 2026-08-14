@@ -159,7 +159,7 @@ The programming interface is Bluesky conversation itself. "Yes continue" can be 
 
 The project therefore belongs to the emerging phenomenon usually called _vibe coding_, but its placement inside an actual social network changes the object of study. A conventional coding agent translates private conversation into software. Buildthis translates *public social interaction into software and then returns that software to the same social environment that produced it*.
 
-Buildthis does not distribute its attention uniformly across possible software. It repeatedly encounters the people around it and turns them into computational material.
+Buildthis does not distribute its attention uniformly across possible software. It repeatedly encounters the _people around it_ and _turns them into computational material_.
 
 That tendency deserves explanation.
 
@@ -185,21 +185,17 @@ Buildthis can be read as an experiment in reducing that translation cost.
 
 Cobb describes some members of this surrounding culture as already "living in the future"—specifically, one in which "you can ask the computer for cool stuff and it can just do it." The computer is not infinitely capable, he emphasizes, but it is "pretty capable."
 
-The experiment is not simply:
-
-#callout[*Can an AI write websites?*]
+The experiment is not simply, "Can an AI write websites?"
 
 It is:
 
-#callout[*What happens when more of the latent expressive power of computing becomes accessible through ordinary social language?*]
+#callout[*What happens when the expressive power of computing becomes accessible through ordinary social language?*]
 
 That question also explains one of Cobb's favorite outcomes. He notes that "the things people ask for are not sites that I would have asked for," adding that this difference is "a big motivation for having it."
 
 Buildthis is therefore not principally an automation system for the creator's backlog.
 
-Its purpose is partly to *decentralize imagination*.
-
-Cobb supplies an executable capability. Other people supply purposes he would not have generated himself.
+Its purpose is to #text(font: "Reey")[decentralize imagination].
 
 = Case and method
 
@@ -215,7 +211,7 @@ The project's public counters measure different units. The timeline calls itself
 
 Rather than silently forcing the numbers to agree, this paper treats the 443-build snapshot as a coherent quantitative cross-section and later counts as evidence of continued growth.#footnote[Distributed systems eventually teach even qualitative researchers to become suspicious of apparently innocent nouns such as _site_, _user_, and _event_.]
 
-For the analysis of person-centered design, we manually coded *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
+For the analysis of person-centered design, we manually classified *100 recent distinct projects* from the public directory. Revisions of the same project were collapsed. A project was classified as *person-centered* when an identifiable person, account, or social relationship was a primary input, subject, or object of the experience. A generic Bluesky client, firehose visualization, or feed utility did not qualify merely because it consumed social data. Under this relatively conservative definition, *40 of 100 projects were person-centered*.
 
 We also coded build events from August 9 through August 11 as a short exploratory window for iteration. Those three days contained 33, 16, and 31 build events respectively, or *80 events*. Of these, *47 (58.8\%)* modified projects coded as person-centered. Across distinct sites represented during the window, person-centered sites averaged approximately *1.88 build events per site*, compared with *1.50* for the remainder.
 
