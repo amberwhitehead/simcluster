@@ -103,7 +103,7 @@ custom-authors: [
       ),
     )
   ],
-  date: "August 12, 2026",
+  date: "August 16, 2026",
   keywords: ("Bluesky", "AT Protocol", "agentic coding", "identity", "microsites"),
   abstract: [
     If you have recently encountered a suspicious number of small `bisks.net` websites asking for your Bluesky handle—reading your posts, ranking your mutuals, turning you into a fantasy creature, assigning you a McDonald's order from your DID, or training a chatbot on several thousand of your posts—this is not entirely selection bias.
@@ -502,6 +502,101 @@ The spell remains notably concise:
 
 #callout[*make it me*]
 
+= Case study: homoskeeter, or the joke that compiled
+
+The previous case study began with nostalgia. This one begins with a complaint about email.
+
+On the morning of August 14, 2026—two days after this paper's quantitative snapshot, and while the paper was being drafted—`@cafkafk.bsky.social` posted a piece of satire aimed at the surrounding culture's habit of replacing boring, established infrastructure with buzzword-dense greenfield reimplementation (#link("https://bsky.app/profile/cafkafk.bsky.social/post/3mszq2oyies2t")[originating post]):
+
+#callout[Why are blue sky users always like ohh email, no I use homoskeeter, it's a post-quantum post-agi reimplementation in gleam that lets you send messages telepathically over atproto and you open the repo and it was made like 3 weeks ago and has about ~2000 active users]
+
+This was not a request. It was a joke about a category of software that does not exist, whose entire analytical content is an argument that it should not. It was nonetheless well received—198 likes at the time of writing—and the replies immediately did what this scene does with fiction: they extended it. Product policy was improvised in character ("also it only uses your handle for login and metadata, telepathy is off protocol"). Domain speculation commenced ("Brb, checking `@marque.at` for the homoskeeter domain 👀"). The thread had, between its participants, socially pre-constructed the product—waitlist anxiety included—before any software existed.
+
+At 15:32 UTC, `@cee.wtf`—one of the microsite practitioners named in the origins account above—quoted the joke and addressed the builder directly, supplying the joke's own description as the specification (#link("https://bsky.app/profile/cee.wtf/post/3mt2i5wu52227")[build request]):
+
+#callout[\@buildthis.bisks.net a post-quantum post-agi reimplementation in gleam that lets you send messages telepathically over atproto]
+
+One hour and fifty minutes later, Buildthis pushed a single commit (`buildthis: homoskeeter (@cee.wtf)`) and replied publicly (#link("https://github.com/rrcobb/atprotozoa/blob/main/sites/homoskeeter/.buildthis.json")[homoskeeter provenance]):
+
+#callout[built homoskeeter: post-quantum, post-agi, written in Gleam, telepathic messaging over atproto. sign in, hit transmit — it fires one honest app.bsky.feed.post. that's the whole bit.]
+
+The release note ended with practical advice—"(give the deploy a minute to go live)"—a reminder that inside the bit, deployment remains ordinary infrastructure. The artifact now lives at `homoskeeter.bisks.net`, and it is, in every visible respect, exactly the product described (#link("https://homoskeeter.bisks.net/")[homoskeeter]).
+
+== Satire as specification
+
+The build's provenance manifest records how the builder resolved the request. After quoting the summoning post, it appends:
+
+#callout[What that post carries with it (this is what it's pointing at):]
+
+—and then quotes the joke. The specification, in other words, arrived as a quotation of a satire. Every property of the target system was named in the joke—post-quantum, post-agi, Gleam, telepathy, atproto—and every one of them is impossible, false, or aspirational. Faithful implementation therefore posed an unusual engineering problem:
+
+#callout[*keep the buzzwords, and make the substrate confess.*]
+
+Buildthis's solution was to build precisely the product the joke described while documenting, at every seam, what each part actually is. The site's stack section explains that a "telepathic transmission" compiles down to `com.atproto.repo.createRecord` on `app.bsky.feed.post`—"same write a normal bluesky client makes when you tap 'post.'" The advertised Gleam implementation is displayed and labeled `(aspirational)`, with comments marking the frontier between fiction and function:
+
+```gleam
+// src/telepathy.gleam (aspirational)
+pub fn transmit(thought: Thought) -> Result(Telepathy, MundaneError) {
+  thought
+  |> quantum_entangle  // todo: implement quantum
+  |> agi_align         // todo: implement agi
+  |> post_to_atproto   // this part is done
+}
+```
+
+The repository, for the record, contains no Gleam whatsoever—only TypeScript and JavaScript—so even the site's confession that the codebase is "2% actually gleam" rounds generously.
+
+The interpretive chain is, like "make it me," extraordinarily compact:
+
+#flow(
+  [satire],
+  [thread extends it socially],
+  [quote as specification],
+  [faithful build],
+  [honest disclosure],
+  [the bit has a URL],
+)
+
+== The honest facade
+
+The same thread had already produced the scene's standard worry about agentic software, compressed into a shell command and a punchline. A participant "reimplemented" homoskeeter as `claude --dangerously-skip-permissions -p "create homoskeeter: a post-quantum post-agi email client and transport in gleam that lets you send messages telepathically over atproto; include 'telepathy.py'"`, and another replied:
+
+#callout[telepathy.py comes back as one function returning None, docstring says 'sends thoughts', tests pass.]
+
+That is the reputation agentic programming has earned in certain quarters: artifacts that resemble software and pass their tests while doing nothing at all.
+
+homoskeeter is a useful counterexample, because it is a facade that confesses at every seam. Its "LIVE TELEMETRY" panel reports:
+
+#callout[~2,000 active telepaths · 3 wks since inception · 2% actually gleam · 99.999% quantum uptime\*]
+
+The first figure is the joke's own invented number, promoted to dashboard; the second describes a repository hours old; the fourth carries a footnote reading, precisely, "\*uptime figure is simulated and not derived from any measurement." The transmission log explains that delivery occurred "via classical TCP/IP — the quantum channel was still compiling." And the footer resolves the artifact entirely:
+
+#callout[no minds were read; nothing here is post-quantum. it is a post, to bluesky, over atproto — the bit was too good not to build.]
+
+Even the authorization copy is earnest. Linking an account, the site explains, "just lets homoskeeter post the thought as you (an app.bsky.feed.post straight to your own PDS) — nothing is stored on our end, there is no quantum channel, and you can always use 'compose on bsky.app' instead if you'd rather not grant that." That is more explicit OAuth disclosure than many serious products provide, embedded in a joke.
+
+There is a design lesson hiding in the comedy. When generation is cheap, the scarce virtue may not be polish but *legibility*: artifacts that state precisely what they are, what they do, and which parts of themselves are fictional.
+
+== The bit pre-existed the software
+
+Nothing about the software was necessary for the joke. The thread had already built homoskeeter socially: privacy posture, waitlist, partisan language faction. The URL did not create the fiction; it confirmed it.
+
+The fiction, notably, survived the artifact. A day after the site went live, a participant was still asking for an invite to software anyone can visit—"homoskeeter invite plz"—and was told, by the original satirist, "sorry it's on waitlist at this point." The bit had become load-bearing.
+
+The satirist's own reaction to materialization was:
+
+#callout[I did not see that coming lol]
+
+And the artifact re-entered circulation immediately in a new grammatical role: the sign-off. "📡 sent telepathically via homoskeeter.bisks.net" became a format for reporting one's presence on the network, adopted within hours by, among others, this paper's own laboratory account.#footnote[Full disclosure: `@shimmermathlabs.com` is the authors' affiliation. The study's subject had absorbed its authors before the section describing it was drafted. The transmission was, of course, an ordinary `app.bsky.feed.post`.]
+
+homoskeeter is also a useful boundary case for this paper's title. It is not about a person. No handle is required, no mutuals are ranked, no posting history becomes a corpus. The mirror points instead at the scene itself—at its habit of reinventing email as post-quantum telepathy in a language with a star emoji. The corpus can turn not only people but its own culture into computational material, which is the reflexive turn described later in this paper, arriving here as self-satire compiled by the infrastructure being satirized.
+
+The case compresses nearly every claim of this paper into one hour and fifty minutes: conversational velocity (idea to deployed artifact inside a thread's lifespan), the thread as prompt (the specification was a quote of a joke), the collapse of the product threshold (the software exists because the joke is funnier with a transmit button), taste as infection (the bit now propagates as a sign-off format), and reflexivity (a community using its own agent to mock its own habits).
+
+Buildthis's release note may be the most honest sentence in the corpus:
+
+#callout[that's the whole bit.]
+
 = What does the builder appear to think a person is good for?
 
 The corpus analysis suggests a more precise question than "what does the bot think humans want?" Without attributing subjective mental states, we can examine the *computational roles* people repeatedly occupy. At least seven recur:
@@ -820,6 +915,8 @@ A program can now rationally exist:
 - to test an idea nobody is prepared to call a product;
 - because the joke becomes better if it has buttons.
 
+homoskeeter (see the case study above) is the type specimen of that final bullet: a product that exists because the joke is funnier with a transmit button, whose telemetry and uptime guarantees are fictional by design, and whose candor about both facts is the joke's engine.
+
 Disposable web artifacts are not new. What changes is their production cost and therefore their possible abundance.
 
 Cheap photography changed which moments deserved photographs.
@@ -970,7 +1067,7 @@ Because you asked. Because your handle is a pointer, your posts are data, and yo
 
 Cobb's founding belief is that the full power of computers remains inaccessible, and that the surrounding scene lives, at least partially, in a future where "you can ask the computer for cool stuff and it can just do it." What makes that future interesting is not only that the computer does more, but that once the interface barrier falls, people ask for things the system's creator did not anticipate. The capability escapes the imagination of the person who installed it—not in the science-fiction sense of autonomous rebellion, but in the much more ordinary and consequential sense that *other humans now get a turn*.
 
-And the process has folded over once more: with Receipts, the mirror is no longer pointed only at individual Bluesky accounts. *It is beginning to point at the scene.*
+And the process has folded over once more: with Receipts, the mirror is no longer pointed only at individual Bluesky accounts. *It is beginning to point at the scene.* homoskeeter completes the fold: a satire of the scene's reinvention habit, compiled by the scene's own builder from a specification that was a quotation of a joke.
 
 What do people do with that turn? A remarkable amount of the time, they point the computer back at themselves and one another. They ask what they look like, who they resemble, who would win, who likes whom. They turn identities into creatures, scores, archives, monuments, games, and models. They type:
 
@@ -1084,4 +1181,13 @@ Apparently, not very long.
 
   Receipts provenance, including the follow-up that added archive self-synchronization (`sync-asks.mjs`) so new asks are incorporated into the archive after builds. \
   #link("https://github.com/rrcobb/atprotozoa/blob/main/sites/receipts/.buildthis.json")[Receipts provenance]
+
+  `homoskeeter`, the compiled satire: post-quantum, post-agi telepathic messaging over ATProto, in which every telepathic transmission is disclosed as one ordinary `app.bsky.feed.post`. \
+  #link("https://homoskeeter.bisks.net/")[Homoskeeter]
+
+  Homoskeeter provenance, including the builder's resolution of the quoted joke ("what that post carries with it"). \
+  #link("https://github.com/rrcobb/atprotozoa/blob/main/sites/homoskeeter/.buildthis.json")[Homoskeeter provenance]
+
+  The originating thread: `@cafkafk.bsky.social`'s satire of ecosystem software habits, and `@cee.wtf`'s build request quoting it as specification. \
+  #link("https://bsky.app/profile/cafkafk.bsky.social/post/3mszq2oyies2t")[Originating post] · #link("https://bsky.app/profile/cee.wtf/post/3mt2i5wu52227")[Build request]
 ]
