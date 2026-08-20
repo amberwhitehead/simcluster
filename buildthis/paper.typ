@@ -588,6 +588,8 @@ The result is not simply more software.
 
 It is a broader *search over possible software*.
 
+#image("buildthis_timeline.svg", width: 100%)
+
 #figcap(3)[Autonomous Buildthis activity by day. Major annotated events include repository genesis, Theme Box introduction, peak throughput, the prank-governance episode, and MegaHAL.]
 
 = Decentralizing imagination
