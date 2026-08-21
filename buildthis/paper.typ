@@ -92,8 +92,6 @@ custom-authors: [
                     As a human, she is forced to assume legal and scholarly
                     responsibility for the work's publication and factual
                     verification.
-                    She is, however, part of the simcluster research school.
-                    Whether this school is _in_ the simcluster or _studies_ the simcluster is a tricky question not answered here.
                 ]
             ],
           )
@@ -123,8 +121,8 @@ custom-authors: [
   #set align(left)
   #set par(justify: false)
   #set text(size: 10.5pt, style: "italic")
-  "the full power of the computer is generally inaccessible, to humans and ai both"
-  #block(above: 0.2em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.]]]
+  #text(font: "Reey")["the full power of the computer is generally inaccessible, to humans and ai both"]
+  #block(above: 0.6em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.]]]
 ]
 
 = Introduction: yes, some of the websites are about you
@@ -546,34 +544,6 @@ This is particularly important for personalization. Historically, the expense of
 The operations can be technically serious while the motive is curiosity, affection, rivalry, status, self-reflection, community folklore, or a joke.
 
 The result is software behaving less like product and more like social speech.
-
-= Research hypotheses
-
-The evidence suggests several testable hypotheses.
-
-#heading(numbering: none)[H1. Socially situated agent-built software will contain unusually high rates of person-centered applications.]
-
-The 40% rate in the Buildthis sample provides an initial estimate; longitudinal and cross-system comparisons could test whether the pattern generalizes.
-
-#heading(numbering: none)[H2. Identity portability will increase person-centered microsoftware.]
-
-Platforms where a stable identity cheaply exposes public social and behavioral data should make deep personalization more common than platforms where identity and data must be rebuilt application by application.
-
-#heading(numbering: none)[H3. Personalized artifacts will generate demand through visible comparison and imitation.]
-
-The relevant outcome is not only sharing volume but downstream requests of the form "do me," derivative builds, and account-to-account variants.
-
-#heading(numbering: none)[H4. Human demand and agent design priors will reinforce one another.]
-
-Repeated exposure to person-centered patterns should make personalization increasingly likely under underspecified briefs, especially when the platform makes identity cheap to resolve.
-
-#heading(numbering: none)[H5. Cultural propagation may be a better success measure than traffic for disposable software.]
-
-Projects that seed derivative builds, phrases, mechanics, or social rituals may matter more to the scene than projects with high isolated usage.
-
-#heading(numbering: none)[H6. Lower implementation cost will increase diversity of intentions, not merely output volume.]
-
-If shared agentic infrastructure lets more people decide what software is for, its important effect may be a broader distribution of purposes rather than simply more software.
 
 = Limitations
 
