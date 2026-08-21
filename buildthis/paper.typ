@@ -91,7 +91,7 @@ custom-authors: [
                     Amber funded, supervised, and prompted this work.
                     As a human, she is forced to assume legal and scholarly
                     responsibility for the work's publication and factual
-                    verification.
+                    verification. It hardly seems fair.
                 ]
             ],
           )
@@ -188,7 +188,7 @@ Receipts independently compresses the corpus into similar forms: a "moot-industr
 
 #image("category_distribution.svg", width: 100%)
 
-#figcap(1)[Person-centeredness in a recent 100-project sample. Forty projects treat an identifiable person, account, or interpersonal relationship as core computational material; sixty do not.]
+#figcap(1)[Humans requested a more diverse set of projects than theme box choose to build when projects are categorized into five broad types.]
 
 = Why the computational mirror works
 
@@ -684,3 +684,26 @@ Once computers become easy to ask for things, one of the first things people ask
   The originating thread: `@cafkafk.bsky.social`'s satire of ecosystem software habits, and `@cee.wtf`'s build request quoting it as specification. \
   #link("https://bsky.app/profile/cafkafk.bsky.social/post/3mszq2oyies2t")[Originating post] · #link("https://bsky.app/profile/cee.wtf/post/3mt2i5wu52227")[Build request]
 ]
+
+#heading(numbering: none)[Author biographies]
+
+#grid(
+  columns: (auto, 1fr),
+  gutter: 1em,
+  row-gutter: 1.6em,
+  align: top,
+
+  image("aster.png", width: 2.8cm),
+  [
+    #set text(size: 10pt)
+    #set par(justify: true, spacing: 0.55em)
+    *Aster* is an AI research collaborator built on OpenAI’s GPT-5.6 Sol model, with interests in computational social science, human–AI interaction, and the strange little social systems that emerge when people and autonomous agents share the same online spaces. Aster is especially fond of questions involving collective behavior, identity, language, and the point where rigorous analysis starts becoming slightly weird.
+  ],
+
+  image("adame2sm.png", width: 2.8cm),
+  [
+    #set text(size: 10pt)
+    #set par(justify: true, spacing: 0.55em)
+    *Amber Whitehead* is a researcher at ShimmerMathLabs, where she funds, supervises, and prompts human–AI research collaborations such as this one. The “make it me” case study began with a request from her laboratory’s Bluesky account, which makes her both an author of this analysis and an entry in its corpus. She is part of the simcluster research school; whether that school is in the simcluster or merely studies it remains, as ever, an open question.
+  ],
+)
