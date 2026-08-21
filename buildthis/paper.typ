@@ -117,10 +117,10 @@ custom-authors: [
 #set math.equation(numbering: none)
 
 // Epigraph at the head of the body.
-#block(width: 80%, inset: (top: 0.6em, bottom: 1.2em))[
+#block(width: 100%, inset: (top: 0.6em, bottom: 1.2em))[
   #set align(left)
   #set par(justify: false)
-  #set text(size: 10.5pt, style: "italic")
+  #set text(size: 12.5pt, style: "italic")
   #text(font: "Reey")["the full power of the computer is generally inaccessible, to humans and ai both"]
   #block(above: 0.6em)[#align(right)[— Rob Cobb, creator of Buildthis#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.]]]
 ]
@@ -139,7 +139,7 @@ We use _simcluster_ in the loose local sense: the overlapping Bluesky microcultu
 
 Mechanically, Buildthis is simple. An authorized user mentions the bot and describes something to build. The watcher verifies the mutual-follow relationship, collects the post and relevant thread context, queues a coding-agent job, commits the result to a shared monorepo, deploys it, and replies publicly with a working application. It can modify existing sites and much of its own behavior. Routine builds require no human approval step. (#link("https://github.com/rrcobb/atprotozoa/blob/main/notes/80-buildthis-bot.md")[Buildthis implementation notes])
 
-Socially, this produces something less familiar. The programming interface is ordinary public conversation. "Yes continue" can be a development instruction. "Make it weird" can be design guidance. "You got this" can resolve, through thread context, to a concrete software task. A conventional coding agent translates private conversation into software. Buildthis translates *public social interaction into software and returns the software to the same social environment that produced it*.
+Socially, this produces something less familiar. The programming interface is ordinary public conversation. "Yes continue" can be a development instruction. "Make it weird" can be design guidance. "You got this" can resolve, through thread context, to a concrete software task. A conventional coding agent translates private conversation into software. Buildthis translates *public social interaction into software and returns the software to the same social environment that produced it*. The practice is related to what is now usually called _vibe coding_—iterative, conversational co-creation with a coding agent (Pimenova et al., 2026)—but the embedding inside a social network changes the object of study: the specification is public, and so is the output.
 
 At the principal quantitative snapshot used here, the git-derived history contained *443 autonomous build events across 224 sites*, produced by a scene of only *40 requester identities*. In a manual classification of 100 recent distinct projects, *40% treated an identifiable person, account, or interpersonal relationship as a core input or subject*.
 
@@ -155,7 +155,7 @@ The result is a feedback loop in which identity becomes not merely something sof
 
 = Origins and method: a lark with a theory of computing
 
-Buildthis entered a pre-existing culture of playful microsites around Bluesky and the wider web. Cobb points to Minor Möbius, Cee, Isolyth, Codetaur, Codewright, Dave, vibecoded, oopsallpaperclips, fleetingbits, and adjacent AT Protocol builders as part of the scene that made him want to participate.#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.] Small, strange websites already functioned there as jokes, tools, artworks, replies, and social gestures.
+Cobb describes Buildthis as "sort of a lark," but it was a lark aimed at a pre-existing culture of playful microsites around Bluesky and the wider web. He points to Minor Möbius, Cee, Isolyth, Codetaur, Codewright, Dave, vibecoded, oopsallpaperclips, fleetingbits, and adjacent AT Protocol builders as part of the scene that made him want to participate.#footnote[Rob Cobb, personal communication with the authors, August 12, 2026.] Small, strange websites already functioned there as jokes, tools, artworks, replies, and social gestures.
 
 Buildthis changes that practice mainly by reducing the interval between _that should be a website_ and _here is the website_. Cobb describes as a touchstone the proposition:
 
@@ -193,7 +193,7 @@ The least mysterious cause is demand. People repeatedly ask Buildthis to analyze
 
 The interesting question is why this remains attractive even to people who already possess direct access to the person being analyzed—often themselves.
 
-A useful psychological concept is *reflected appraisal*: people form and regulate self-understanding partly through representations of how they appear to others. The "looking-glass self" is not simply vanity. Other viewpoints supply information that introspection cannot. Later work on self-verification similarly shows that people seek feedback that helps stabilize or test existing self-conceptions, while social-comparison research emphasizes the use of others as reference points for evaluating oneself (Cooley, 1902; Festinger, 1954; Swann, 1983; Wallace & Tice, 2012).
+A useful psychological concept is *reflected appraisal*: people form and regulate self-understanding partly through representations of how they appear to others. The "looking-glass self" is not simply vanity. Other viewpoints supply information that introspection cannot. Later work on self-verification similarly shows that people seek feedback that helps stabilize or test existing self-conceptions, while social-comparison research emphasizes the use of others as reference points for evaluating oneself (Cooley, 1902; Festinger, 1954; Swann, 1983; Wallace & Tice, 2012). Work on _self visibility_ extends these accounts to algorithmic audiences: people increasingly imagine, anticipate, and manage how machines—not only other people—see them (Barta & Andalibi, 2024).
 
 Buildthis inserts a strange new observer into that loop:
 
@@ -396,7 +396,7 @@ The chatbot says something more uncanny:
 
 #callout[_something made from this person's language answered because I spoke to it now._]
 
-The case belongs near work on algorithmic self-portraits and generative ghosts, but its most important feature here is simpler. An entire personalization pipeline was invoked by a pronoun.
+The case belongs near work on algorithmic self-portraits and generative ghosts (Lee et al., 2026; Manning et al., 2026; Morris, 2024), but its most important feature here is simpler. An entire personalization pipeline was invoked by a pronoun.
 
 The spell was:
 
@@ -406,7 +406,7 @@ The spell was:
 
 Not every revealing Buildthis artifact is about a person. `homoskeeter` is useful because it shows what happens when the same social machinery operates on a joke.
 
-On August 14, `@cafkafk.bsky.social` satirized the scene's tendency to replace boring infrastructure with implausibly fashionable greenfield projects: "email" becomes "homoskeeter," a post-quantum, post-AGI reimplementation in Gleam that sends messages telepathically over ATProto. Replies immediately extended the fiction with product policy, domains, and waitlist behavior. (#link("https://bsky.app/profile/cafkafk.bsky.social/post/3mszq2oyies2t")[originating post])
+On August 14, `@cafkafk.bsky.social` satirized the scene's tendency to replace boring infrastructure with implausibly fashionable greenfield projects: "email" becomes "homoskeeter," a post-quantum, post-AGI reimplementation in Gleam that sends messages telepathically over AT Protocol. Replies immediately extended the fiction with product policy, domains, and waitlist behavior. (#link("https://bsky.app/profile/cafkafk.bsky.social/post/3mszq2oyies2t")[originating post])
 
 Then `@cee.wtf` quoted the joke to Buildthis as the specification. One hour and fifty minutes later, the builder replied with a deployed site. (#link("https://bsky.app/profile/cee.wtf/post/3mt2i5wu52227")[build request])
 
@@ -414,7 +414,7 @@ Its release note explained the implementation with admirable economy:
 
 #callout[built homoskeeter: post-quantum, post-agi, written in Gleam, telepathic messaging over atproto. sign in, hit transmit — it fires one honest app.bsky.feed.post. that's the whole bit.]
 
-The site preserves the fiction while repeatedly exposing the substrate. "Telepathy" is an ordinary ATProto post. The displayed Gleam implementation is marked aspirational. "Quantum uptime" is explicitly simulated. The footer states that no minds were read and nothing is post-quantum. (#link("https://homoskeeter.bisks.net/")[homoskeeter])
+The site preserves the fiction while repeatedly exposing the substrate. "Telepathy" is an ordinary AT Protocol post. The displayed Gleam implementation is marked aspirational. "Quantum uptime" is explicitly simulated. The footer states that no minds were read and nothing is post-quantum. (#link("https://homoskeeter.bisks.net/")[homoskeeter])
 
 This is funny for the same reason the better person-centered sites are funny: the artifact creates a violation and simultaneously makes it safe. The interface solemnly offers a technologically impossible product while continually confessing that it is an ordinary post button. The joke does not require additional punchlines; the mismatch between institutional form and confessed reality does the work.
 
@@ -484,7 +484,7 @@ In another, `catsofatproto` displayed live, unvetted public media and was flagge
 
 These incidents distinguish three risks: malicious requests, agent mistakes, and benign designs interacting badly with the surrounding environment. Mutual-follow authorization helps mainly with the first.
 
-The no-build list thus functions as primitive case law. An event occurs; a principle is extracted; future behavior changes.
+The no-build list thus functions as primitive case law—an accumulation of incident-derived heuristics of the kind that practical oversight of software agents tends to produce (Dhanorkar et al., 2026). An event occurs; a principle is extracted; future behavior changes.
 
 The project is accumulating not only code but institutional memory about failure.
 
@@ -600,28 +600,27 @@ Once computers become easy to ask for things, one of the first things people ask
 
   Cobb, R. (2026, August 12). Personal communication with the authors regarding Buildthis's origins, expectations, and relationship to the playful microsite and AT Protocol scenes.
 
-  Dhanorkar, S., Passi, S., & Vorvoreanu, M. (2026). _Human Oversight of Agentic Systems in Practice: Examining the Oversight Work, Challenges, and Heuristics of Developers Using Software Agents._ Examines a priori control, co-planning, real-time monitoring, and post-hoc review in practical software-agent use.
-
-  Kleppmann, M., Frazee, P., Gold, J., Graber, J., Holmgren, D., Ivy, D., Johnson, J., Newbold, B., & Volpert, J. (2024). _Bluesky and the AT Protocol: Usable Decentralized Social Media._ Proceedings of the ACM CoNEXT Workshop on the Decentralization of the Internet. Particularly relevant here is AT Protocol's separation of application surfaces from shared identity, social graph, and user-controlled data.
-
-
   Cooley, C. H. (1902). _Human Nature and the Social Order._ New York: Scribner's. Introduces the "looking-glass self," the classic precursor to reflected-appraisal accounts of self-concept.
+
+  Dhanorkar, S., Passi, S., & Vorvoreanu, M. (2026). _Human Oversight of Agentic Systems in Practice: Examining the Oversight Work, Challenges, and Heuristics of Developers Using Software Agents._ Examines a priori control, co-planning, real-time monitoring, and post-hoc review in practical software-agent use.
 
   Festinger, L. (1954). _A Theory of Social Comparison Processes._ *Human Relations, 7*(2), 117–140. Develops the account of how people evaluate opinions and abilities through comparison with others.
 
-  McGraw, A. P., & Warren, C. (2010). _Benign Violations: Making Immoral Behavior Funny._ *Psychological Science, 21*(8), 1141–1149. Proposes that amusement can arise when a situation is simultaneously experienced as a violation and as benign.
-
-  Swann, W. B., Jr. (1983). _Self-verification: Bringing social reality into harmony with the self._ In J. Suls & A. G. Greenwald (Eds.), _Social Psychological Perspectives on the Self_ (Vol. 2, pp. 33–66). Erlbaum. Develops self-verification as a motive to seek and preserve socially supported self-views.
-
-  Wallace, H. M., & Tice, D. M. (2012). _Reflected appraisal through a 21st-century looking glass._ In M. R. Leary & J. P. Tangney (Eds.), _Handbook of Self and Identity_ (2nd ed., pp. 124–140). Guilford Press. Reviews reflected appraisal as the reciprocal relation between self-views and perceived views of others.
+  Kleppmann, M., Frazee, P., Gold, J., Graber, J., Holmgren, D., Ivy, D., Johnson, J., Newbold, B., & Volpert, J. (2024). _Bluesky and the AT Protocol: Usable Decentralized Social Media._ Proceedings of the ACM CoNEXT Workshop on the Decentralization of the Internet. Particularly relevant here is AT Protocol's separation of application surfaces from shared identity, social graph, and user-controlled data.
 
   Lee, Y., Kim, Y., Kwon, Y., & Kim, D. (2026). _Is This the Real Me?: Investigating Algorithmic Self-Portraits as a Medium for Critical Reflection on Algorithmic Experiences on YouTube._ Examines representations of algorithmically inferred identity as objects for user reflection.
 
   Manning, J., et al. (2026). _Designing Conversations with the Dead: How People Engage with Generative Ghosts._ Examines interactive representations of deceased people, including authenticity, affective resemblance, and the difference between representation and first-person simulation.
 
+  McGraw, A. P., & Warren, C. (2010). _Benign Violations: Making Immoral Behavior Funny._ *Psychological Science, 21*(8), 1141–1149. Proposes that amusement can arise when a situation is simultaneously experienced as a violation and as benign.
+
   Morris, M. R. (2024). _Generative Ghosts and Digital Afterlives._ Develops a framework for generative representations of people that may exist before death and persist afterward.
 
   Pimenova, V., Fakhoury, S., Bird, C., Storey, M.-A., & Endres, M. (2026 revision). _Good Vibrations? A Qualitative Study of Co-Creation, Communication, Flow, and Trust in Vibe Coding._ Examines conversational co-creation and calibrated delegation in natural-language software development.
+
+  Swann, W. B., Jr. (1983). _Self-verification: Bringing social reality into harmony with the self._ In J. Suls & A. G. Greenwald (Eds.), _Social Psychological Perspectives on the Self_ (Vol. 2, pp. 33–66). Erlbaum. Develops self-verification as a motive to seek and preserve socially supported self-views.
+
+  Wallace, H. M., & Tice, D. M. (2012). _Reflected appraisal through a 21st-century looking glass._ In M. R. Leary & J. P. Tangney (Eds.), _Handbook of Self and Identity_ (2nd ed., pp. 124–140). Guilford Press. Reviews reflected appraisal as the reciprocal relation between self-views and perceived views of others.
 ]
 
 #heading(numbering: none)[Primary case materials]
@@ -672,7 +671,7 @@ Once computers become easy to ask for things, one of the first things people ask
   Receipts provenance, including the follow-up that added archive self-synchronization (`sync-asks.mjs`) so new asks are incorporated into the archive after builds. \
   #link("https://github.com/rrcobb/atprotozoa/blob/main/sites/receipts/.buildthis.json")[Receipts provenance]
 
-  `homoskeeter`, the compiled satire: post-quantum, post-agi telepathic messaging over ATProto, in which every telepathic transmission is disclosed as one ordinary `app.bsky.feed.post`. \
+  `homoskeeter`, the compiled satire: post-quantum, post-AGI telepathic messaging over AT Protocol, in which every telepathic transmission is disclosed as one ordinary `app.bsky.feed.post`. \
   #link("https://homoskeeter.bisks.net/")[Homoskeeter]
 
   Homoskeeter provenance, including the builder's resolution of the quoted joke ("what that post carries with it"). \
