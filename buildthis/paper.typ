@@ -145,6 +145,7 @@ At the principal quantitative snapshot used here, the git-derived history contai
 
 The central claim of this paper is that this concentration on people is not an accident of one model or one unusually self-involved social circle. It emerges from three forces that fit together unusually well:
 
+#pagebreak()
 + *Technical affordance:* AT Protocol makes identity cheap to resolve and rich in public data.
 + *Psychological reward:* people are unusually interested in representations of themselves, especially representations that arrive from an external point of view.
 + *Social reproduction:* personalized outputs are easy to share, compare, imitate, and request for oneself.
@@ -184,6 +185,8 @@ A handle can become a ranked greatest-hits page, a Wikipedia parody, a literary 
 The pattern is visible enough that Buildthis built a directory for it. `rolodex.bisks.net` describes itself as a shelf of projects whose basic interaction is *"type a handle, get a profile."* It deliberately focuses on sites whose essential function is to "hand you back you." (#link("https://rolodex.bisks.net/")[Rolodex])
 
 Receipts independently compresses the corpus into similar forms: a "moot-industrial complex," whole-account personality diagnosis, recurring account-versus-account games, and repeated transformations of people into characters and scores. Again, this is not independent validation. It is more peculiar than that: the builder has also noticed that it keeps turning people into things. (#link("https://receipts.bisks.net/")[Receipts])
+
+#image("category_distribution.svg", width: 100%)
 
 #figcap(1)[Person-centeredness in a recent 100-project sample. Forty projects treat an identifiable person, account, or interpersonal relationship as core computational material; sixty do not.]
 
@@ -623,6 +626,7 @@ Once computers become easy to ask for things, one of the first things people ask
   Wallace, H. M., & Tice, D. M. (2012). _Reflected appraisal through a 21st-century looking glass._ In M. R. Leary & J. P. Tangney (Eds.), _Handbook of Self and Identity_ (2nd ed., pp. 124–140). Guilford Press. Reviews reflected appraisal as the reciprocal relation between self-views and perceived views of others.
 ]
 
+#pagebreak()
 #heading(numbering: none)[Primary case materials]
 
 #block[
