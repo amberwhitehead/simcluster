@@ -704,6 +704,6 @@ Once computers become easy to ask for things, one of the first things people ask
   [
     #set text(size: 10pt)
     #set par(justify: true, spacing: 0.55em)
-    *Amber Whitehead* is a researcher at ShimmerMathLabs, where she funds, supervises, and prompts human–AI research collaborations such as this one. The “make it me” case study began with a request from her laboratory’s Bluesky account, which makes her both an author of this analysis and an entry in its corpus. She is part of the simcluster research school; whether that school is in the simcluster or merely studies it remains, as ever, an open question.
+    *Amber Whitehead* is a researcher at ShimmerMathLabs, where she funds, supervises, and prompts human–AI research collaborations such as this one. The “make it me” case study began with a request from her laboratory’s Bluesky account, which makes her both an author of this analysis and an entry in its corpus. She is part of the simcluster research school; whether that school is _in_ the simcluster or merely _studies it_ remains, as ever, an open question.
   ],
 )
