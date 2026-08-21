@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+<rect width="100%" height="100%" fill="white"/>
+
+<style>
+  text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #222; }
+  .label { font-size: 16px; }
+  .tick { font-size: 13px; fill: #666; }
+  .legend { font-size: 15px; }
+  .value { font-size: 13px; fill: #333; }
+  .grid { stroke: #dddddd; stroke-width: 1; }
+  .axis { stroke: #999999; stroke-width: 1.2; }
+</style>
+
+<rect x="220" y="16" width="16" height="16" rx="2" fill="#4C78A8"/>
+<text x="244" y="29" class="legend">Human</text>
+<rect x="340" y="16" width="16" height="16" rx="2" fill="#F58518"/>
+<text x="364" y="29" class="legend">Theme Box</text>
+<line x1="220.0" y1="70" x2="220.0" y2="490" class="grid"/>
+<text x="220.0" y="516" text-anchor="middle" class="tick">0%</text>
+<line x1="336.7" y1="70" x2="336.7" y2="490" class="grid"/>
+<text x="336.7" y="516" text-anchor="middle" class="tick">10%</text>
+<line x1="453.3" y1="70" x2="453.3" y2="490" class="grid"/>
+<text x="453.3" y="516" text-anchor="middle" class="tick">20%</text>
+<line x1="570.0" y1="70" x2="570.0" y2="490" class="grid"/>
+<text x="570.0" y="516" text-anchor="middle" class="tick">30%</text>
+<line x1="686.7" y1="70" x2="686.7" y2="490" class="grid"/>
+<text x="686.7" y="516" text-anchor="middle" class="tick">40%</text>
+<line x1="803.3" y1="70" x2="803.3" y2="490" class="grid"/>
+<text x="803.3" y="516" text-anchor="middle" class="tick">50%</text>
+<line x1="920.0" y1="70" x2="920.0" y2="490" class="grid"/>
+<text x="920.0" y="516" text-anchor="middle" class="tick">60%</text>
+<text x="204" y="117.0" text-anchor="end" class="label">Social / relational</text>
+<rect x="220" y="90.0" width="288.2" height="18" rx="2" fill="#4C78A8"/>
+<text x="516.2" y="104.0" class="value">24.7%</text>
+<rect x="220" y="116.0" width="406.0" height="18" rx="2" fill="#F58518"/>
+<text x="634.0" y="130.0" class="value">34.8%</text>
+<text x="204" y="201.0" text-anchor="end" class="label">Game / play</text>
+<rect x="220" y="174.0" width="212.3" height="18" rx="2" fill="#4C78A8"/>
+<text x="440.3" y="188.0" class="value">18.2%</text>
+<rect x="220" y="200.0" width="609.0" height="18" rx="2" fill="#F58518"/>
+<text x="837.0" y="214.0" class="value">52.2%</text>
+<text x="204" y="285.0" text-anchor="end" class="label">Creative / ambient</text>
+<rect x="220" y="258.0" width="333.7" height="18" rx="2" fill="#4C78A8"/>
+<text x="561.7" y="272.0" class="value">28.6%</text>
+<rect x="220" y="284.0" width="151.7" height="18" rx="2" fill="#F58518"/>
+<text x="379.7" y="298.0" class="value">13%</text>
+<text x="204" y="369.0" text-anchor="end" class="label">Utility / information</text>
+<rect x="220" y="342.0" width="242.7" height="18" rx="2" fill="#4C78A8"/>
+<text x="470.7" y="356.0" class="value">20.8%</text>
+<text x="228" y="382.0" class="value">0%</text>
+<text x="204" y="453.0" text-anchor="end" class="label">Meta / community</text>
+<rect x="220" y="426.0" width="91.0" height="18" rx="2" fill="#4C78A8"/>
+<text x="319.0" y="440.0" class="value">7.8%</text>
+<text x="228" y="466.0" class="value">0%</text>
+<line x1="220" y1="490" x2="920" y2="490" class="axis"/>
+</svg>
